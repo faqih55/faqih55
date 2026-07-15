@@ -1,25 +1,22 @@
 <div align="center">
 
-[![header](https://capsule-render.vercel.app/api?type=venom&color=0:070b14,30:00ffff,60:b700ff,100:070b14&height=220&section=header&text=FAQIH55&fontColor=00ffff&fontSize=80&fontAlignY=40&animation=fadeIn&desc=iOS%20Developer%20·%20Fullstack%20Engineer%20·%20Digital%20Craftsman&descColor=e2e8f0&descSize=17&descAlignY=62&stroke=00ffff&strokeWidth=2)](https://github.com/faqih55)
+[![header](https://capsule-render.vercel.app/api?type=venom&color=0:070b14,30:00ffff,60:b700ff,100:070b14&height=220&section=header&text=FAQIH55&fontColor=00ffff&fontSize=80&fontAlignY=40&animation=fadeIn&desc=iOS%20Developer%20%C2%B7%20Fullstack%20Engineer%20%C2%B7%20Digital%20Craftsman&descColor=e2e8f0&descSize=17&descAlignY=62&stroke=00ffff&strokeWidth=2)](https://github.com/faqih55)
 
-<!-- Typing SVG -->
 <a href="https://github.com/faqih55">
-  <img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&weight=700&size=20&duration=3000&pause=800&color=00FFFF&center=true&vCenter=true&multiline=false&width=750&lines=◈+Hello%2C+World!+I+am+faqih55+◈;🍎+Building+iOS+apps+with+SwiftUI;⚡+Fullstack+Developer+%7C+Laravel+%2B+PHP;💙+Cross-Platform+with+Flutter+%26+Dart;🌐+Web+Craftsman+%7C+HTML+%2B+CSS+%2B+JS;🚀+Turning+ideas+into+digital+reality;✨+Welcome+to+my+digital+universe" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&weight=700&size=20&duration=3000&pause=800&color=00FFFF&center=true&vCenter=true&width=750&lines=%E2%97%88+Hello%2C+World!+I+am+faqih55+%E2%97%88;%F0%9F%8D%8E+Building+iOS+apps+with+SwiftUI;%E2%9A%A1+Fullstack+Developer+%7C+Laravel+%2B+PHP;%F0%9F%92%99+Cross-Platform+with+Flutter+%26+Dart;%F0%9F%8C%90+Web+Craftsman+%7C+HTML+%2B+CSS+%2B+JS;%F0%9F%9A%80+Turning+ideas+into+digital+reality;%E2%9C%A8+Welcome+to+my+digital+universe" alt="Typing SVG" />
 </a>
 
 <br/>
 
-<!-- Badges -->
-<img src="https://img.shields.io/badge/◈_STATUS-ONLINE-00ffff?style=for-the-badge&labelColor=070b14&color=00ffff" />
-<img src="https://img.shields.io/badge/⚡_iOS-DEVELOPER-b700ff?style=for-the-badge&logo=apple&logoColor=white&labelColor=070b14" />
-<img src="https://img.shields.io/badge/🌐_FULLSTACK-ENGINEER-ff0080?style=for-the-badge&logo=stackblitz&logoColor=white&labelColor=070b14" />
-<img src="https://img.shields.io/badge/🇮🇩_BASED-INDONESIA-ffd700?style=for-the-badge&labelColor=070b14" />
+![STATUS](https://img.shields.io/badge/%E2%97%88_STATUS-ONLINE-00ffff?style=for-the-badge&labelColor=070b14)
+![iOS](https://img.shields.io/badge/%E2%9A%A1_iOS-DEVELOPER-b700ff?style=for-the-badge&logo=apple&logoColor=white&labelColor=070b14)
+![FULLSTACK](https://img.shields.io/badge/%F0%9F%8C%90_FULLSTACK-ENGINEER-ff0080?style=for-the-badge&logo=stackblitz&logoColor=white&labelColor=070b14)
+![INDONESIA](https://img.shields.io/badge/%F0%9F%87%AE%F0%9F%87%A9_BASED-INDONESIA-ffd700?style=for-the-badge&labelColor=070b14)
 
 </div>
 
 ---
 
-<!-- Terminal Profile Card -->
 <div align="center">
 
 ![Faqih Neural Interface](profile.svg)
@@ -36,44 +33,43 @@
 
 **🍎 iOS Ecosystem**
 
-<img src="https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white" />
-<img src="https://img.shields.io/badge/SwiftUI-147EFB?style=for-the-badge&logo=swift&logoColor=white" />
-<img src="https://img.shields.io/badge/Xcode-147EFB?style=for-the-badge&logo=xcode&logoColor=white" />
-<img src="https://img.shields.io/badge/Apple-000000?style=for-the-badge&logo=apple&logoColor=white" />
+![Swift](https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white)
+![SwiftUI](https://img.shields.io/badge/SwiftUI-147EFB?style=for-the-badge&logo=swift&logoColor=white)
+![Xcode](https://img.shields.io/badge/Xcode-147EFB?style=for-the-badge&logo=xcode&logoColor=white)
+![Apple](https://img.shields.io/badge/Apple-000000?style=for-the-badge&logo=apple&logoColor=white)
 
 <br/><br/>
 
 **💙 Mobile & Cross-Platform**
 
-<img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" />
-<img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" />
+![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
 
 <br/><br/>
 
 **🌐 Web Stack**
 
-<img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" />
-<img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" />
-<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
-<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
-<img src="https://img.shields.io/badge/Blade-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" />
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Blade](https://img.shields.io/badge/Blade-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
 
 <br/><br/>
 
 **🛠 Tools & Infrastructure**
 
-<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
-<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
-<img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" />
-<img src="https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=androidstudio&logoColor=white" />
-<img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
+![Android Studio](https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=androidstudio&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 
 </div>
 
 ---
 
-<!-- GitHub Stats -->
 <div align="center">
 
 ## ◈ STATISTICS
@@ -91,7 +87,6 @@
 
 ---
 
-<!-- Projects -->
 <div align="center">
 
 ## ◈ FEATURED PROJECTS
@@ -109,7 +104,6 @@
 
 ---
 
-<!-- Activity Graph -->
 <div align="center">
 
 ## ◈ CONTRIBUTION GRAPH
@@ -122,7 +116,6 @@
 
 ---
 
-<!-- Snake Animation -->
 <div align="center">
 
 ## ◈ CONTRIBUTION SNAKE
@@ -139,7 +132,6 @@
 
 ---
 
-<!-- Connect -->
 <div align="center">
 
 ## ◈ CONNECT

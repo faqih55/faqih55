@@ -1,170 +1,149 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="480" viewBox="0 0 900 480">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480">
   <defs>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&amp;display=swap');
-      * { font-family: 'Share Tech Mono', 'Courier New', monospace; }
+    <!-- NO @import — system fonts only, safe for GitHub Camo -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#070b14"/>
+      <stop offset="50%"  stop-color="#0a0e1a"/>
+      <stop offset="100%" stop-color="#080c18"/>
+    </linearGradient>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#00ffff" stop-opacity=".15"/>
+      <stop offset="50%"  stop-color="#b700ff" stop-opacity=".10"/>
+      <stop offset="100%" stop-color="#ff0080" stop-opacity=".15"/>
+    </linearGradient>
+    <linearGradient id="gSwift"   x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fa7343"/>
+      <stop offset="100%" stop-color="#ff0080"/>
+    </linearGradient>
+    <linearGradient id="gPHP"     x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#777bb4"/>
+      <stop offset="100%" stop-color="#b700ff"/>
+    </linearGradient>
+    <linearGradient id="gFlutter" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#027dfd"/>
+      <stop offset="100%" stop-color="#00ffff"/>
+    </linearGradient>
+    <linearGradient id="gJS"      x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f7df1e"/>
+      <stop offset="100%" stop-color="#ffd700"/>
+    </linearGradient>
 
-      /* Neon Glow Filter */
-      .glow-cyan { filter: drop-shadow(0 0 6px #00ffff) drop-shadow(0 0 12px #00ffff); }
-      .glow-violet { filter: drop-shadow(0 0 6px #b700ff) drop-shadow(0 0 12px #b700ff); }
-      .glow-pink { filter: drop-shadow(0 0 4px #ff0080); }
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-soft">
+      <feGaussianBlur stdDeviation="1.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
 
-      /* Colors */
-      .c-cyan { fill: #00ffff; }
-      .c-violet { fill: #b700ff; }
-      .c-pink { fill: #ff0080; }
-      .c-white { fill: #e2e8f0; }
-      .c-dim { fill: #4a5568; }
-      .c-green { fill: #00ff88; }
-      .c-yellow { fill: #ffd700; }
+    <clipPath id="c1"><rect x="673" y="222" width="202" height="10" rx="5"/></clipPath>
+    <clipPath id="c2"><rect x="673" y="260" width="202" height="10" rx="5"/></clipPath>
+    <clipPath id="c3"><rect x="673" y="298" width="202" height="10" rx="5"/></clipPath>
+    <clipPath id="c4"><rect x="673" y="336" width="202" height="10" rx="5"/></clipPath>
 
-      /* Pulse animation for status */
-      @keyframes pulse {
-        0%, 100% { opacity: 1; r: 4px; filter: drop-shadow(0 0 4px #00ff88); }
-        50% { opacity: 0.6; r: 6px; filter: drop-shadow(0 0 10px #00ff88); }
+    <style><![CDATA[
+      text { font-family: 'Courier New', Consolas, 'Lucida Console', monospace; }
+
+      /* ── Border glow cycle ── */
+      @keyframes borderCycle {
+        0%,100% { stroke:#00ffff; }
+        50%      { stroke:#b700ff; }
       }
-      .pulse { animation: pulse 2s ease-in-out infinite; }
+      .border-outer { animation: borderCycle 4s ease-in-out infinite; }
 
-      /* Blink cursor */
-      @keyframes blink {
-        0%, 49% { opacity: 1; }
-        50%, 100% { opacity: 0; }
-      }
-      .cursor { animation: blink 1s step-end infinite; }
-
-      /* Scan line sweep */
-      @keyframes scan {
-        0% { y: 60px; opacity: 0.05; }
-        100% { y: 460px; opacity: 0; }
-      }
-      .scan-line { animation: scan 4s linear infinite; }
-
-      /* Terminal lines appearing */
-      @keyframes appear { from { opacity: 0; } to { opacity: 1; } }
-      .t1 { opacity: 0; animation: appear 0.01s 0.5s forwards; }
-      .t2 { opacity: 0; animation: appear 0.01s 1.2s forwards; }
-      .t3 { opacity: 0; animation: appear 0.01s 2.0s forwards; }
-      .t4 { opacity: 0; animation: appear 0.01s 2.8s forwards; }
-      .t5 { opacity: 0; animation: appear 0.01s 3.6s forwards; }
-      .t6 { opacity: 0; animation: appear 0.01s 4.4s forwards; }
-      .t7 { opacity: 0; animation: appear 0.01s 5.2s forwards; }
-      .t8 { opacity: 0; animation: appear 0.01s 6.0s forwards; }
-
-      /* Border flow animation */
-      @keyframes borderGlow {
-        0% { stroke: #00ffff; filter: drop-shadow(0 0 3px #00ffff); }
-        50% { stroke: #b700ff; filter: drop-shadow(0 0 8px #b700ff); }
-        100% { stroke: #00ffff; filter: drop-shadow(0 0 3px #00ffff); }
-      }
-      .border-anim { animation: borderGlow 4s ease-in-out infinite; }
-
-      /* Corner blink */
+      /* ── Corner blink ── */
       @keyframes cornerBlink {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.3; }
+        0%,100% { opacity:1; }
+        50%      { opacity:.3; }
       }
       .corner { animation: cornerBlink 3s ease-in-out infinite; }
 
-      /* Skill bars fill */
-      @keyframes fillBar {
-        from { width: 0; }
+      /* ── Status pulse ── */
+      @keyframes pulse {
+        0%,100% { opacity:1; }
+        50%      { opacity:.4; }
       }
-      .bar-swift { animation: fillBar 1.5s 1s ease-out forwards; width: 0; }
-      .bar-php { animation: fillBar 1.5s 1.3s ease-out forwards; width: 0; }
-      .bar-flutter { animation: fillBar 1.5s 1.6s ease-out forwards; width: 0; }
-      .bar-js { animation: fillBar 1.5s 1.9s ease-out forwards; width: 0; }
+      .pulse { animation: pulse 2s ease-in-out infinite; }
 
-      /* Neon flicker */
+      /* ── Cursor blink ── */
+      @keyframes blink {
+        0%,49% { opacity:1; }
+        50%,100%{ opacity:0; }
+      }
+      .cursor { animation: blink 1s step-end infinite; }
+
+      /* ── Scanline sweep ── */
+      @keyframes scan {
+        0%   { transform: translateY(0px);   opacity:.06; }
+        100% { transform: translateY(420px); opacity:0;   }
+      }
+      .scan { animation: scan 5s linear infinite; }
+
+      /* ── Terminal lines appear ── */
+      @keyframes show { to { opacity:1; } }
+      .l0 { opacity:0; animation: show .01s  0.5s forwards; }
+      .l1 { opacity:0; animation: show .01s  1.3s forwards; }
+      .l2 { opacity:0; animation: show .01s  2.1s forwards; }
+      .l3 { opacity:0; animation: show .01s  2.9s forwards; }
+      .l4 { opacity:0; animation: show .01s  3.7s forwards; }
+      .l5 { opacity:0; animation: show .01s  4.5s forwards; }
+      .l6 { opacity:0; animation: show .01s  5.3s forwards; }
+      .l7 { opacity:0; animation: show .01s  6.1s forwards; }
+      .l8 { opacity:0; animation: show .01s  6.9s forwards; }
+
+      /* ── Skill bars fill ── */
+      @keyframes fillBar { from { width:0; } }
+      .b1 { animation: fillBar 1.8s 1.0s ease-out forwards; width:0; }
+      .b2 { animation: fillBar 1.8s 1.4s ease-out forwards; width:0; }
+      .b3 { animation: fillBar 1.8s 1.8s ease-out forwards; width:0; }
+      .b4 { animation: fillBar 1.8s 2.2s ease-out forwards; width:0; }
+
+      /* ── Title flicker ── */
       @keyframes flicker {
-        0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
-        20%, 24%, 55% { opacity: 0.4; }
+        0%,18%,20%,52%,54%,100% { opacity:1; }
+        19%,53%                  { opacity:.5; }
       }
-      .flicker { animation: flicker 5s infinite; }
-    </style>
-
-    <!-- Gradients -->
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#070b14"/>
-      <stop offset="50%" style="stop-color:#0a0e1a"/>
-      <stop offset="100%" style="stop-color:#080c18"/>
-    </linearGradient>
-    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#00ffff;stop-opacity:0.15"/>
-      <stop offset="50%" style="stop-color:#b700ff;stop-opacity:0.1"/>
-      <stop offset="100%" style="stop-color:#ff0080;stop-opacity:0.15"/>
-    </linearGradient>
-    <linearGradient id="barSwift" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#fa7343"/>
-      <stop offset="100%" style="stop-color:#ff0080"/>
-    </linearGradient>
-    <linearGradient id="barPHP" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#777bb4"/>
-      <stop offset="100%" style="stop-color:#b700ff"/>
-    </linearGradient>
-    <linearGradient id="barFlutter" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#027dfd"/>
-      <stop offset="100%" style="stop-color:#00ffff"/>
-    </linearGradient>
-    <linearGradient id="barJS" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#f7df1e"/>
-      <stop offset="100%" style="stop-color:#ffd700"/>
-    </linearGradient>
-
-    <!-- Glow filters -->
-    <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <filter id="glowSoft" x="-10%" y="-10%" width="120%" height="120%">
-      <feGaussianBlur stdDeviation="1.5" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <filter id="neonText" x="-5%" y="-5%" width="110%" height="110%">
-      <feGaussianBlur stdDeviation="2" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <clipPath id="barClip1"><rect x="652" y="220" width="220" height="12" rx="6"/></clipPath>
-    <clipPath id="barClip2"><rect x="652" y="258" width="220" height="12" rx="6"/></clipPath>
-    <clipPath id="barClip3"><rect x="652" y="296" width="220" height="12" rx="6"/></clipPath>
-    <clipPath id="barClip4"><rect x="652" y="334" width="220" height="12" rx="6"/></clipPath>
+      .flicker { animation: flicker 6s infinite; }
+    ]]></style>
   </defs>
 
-  <!-- Background -->
-  <rect width="900" height="480" fill="url(#bgGrad)"/>
+  <!-- ─── Background ─── -->
+  <rect width="900" height="480" fill="url(#bg)"/>
 
-  <!-- Subtle grid pattern -->
-  <g opacity="0.04" stroke="#00ffff" stroke-width="0.5">
-    <line x1="0" y1="60" x2="900" y2="60"/><line x1="0" y1="120" x2="900" y2="120"/>
-    <line x1="0" y1="180" x2="900" y2="180"/><line x1="0" y1="240" x2="900" y2="240"/>
-    <line x1="0" y1="300" x2="900" y2="300"/><line x1="0" y1="360" x2="900" y2="360"/>
+  <!-- Grid -->
+  <g opacity=".04" stroke="#00ffff" stroke-width=".5">
+    <line x1="0" y1="60"  x2="900" y2="60"/>  <line x1="0" y1="120" x2="900" y2="120"/>
+    <line x1="0" y1="180" x2="900" y2="180"/> <line x1="0" y1="240" x2="900" y2="240"/>
+    <line x1="0" y1="300" x2="900" y2="300"/> <line x1="0" y1="360" x2="900" y2="360"/>
     <line x1="0" y1="420" x2="900" y2="420"/>
-    <line x1="60" y1="0" x2="60" y2="480"/><line x1="120" y1="0" x2="120" y2="480"/>
-    <line x1="180" y1="0" x2="180" y2="480"/><line x1="240" y1="0" x2="240" y2="480"/>
-    <line x1="300" y1="0" x2="300" y2="480"/><line x1="360" y1="0" x2="360" y2="480"/>
-    <line x1="420" y1="0" x2="420" y2="480"/><line x1="480" y1="0" x2="480" y2="480"/>
-    <line x1="540" y1="0" x2="540" y2="480"/><line x1="600" y1="0" x2="600" y2="480"/>
-    <line x1="660" y1="0" x2="660" y2="480"/><line x1="720" y1="0" x2="720" y2="480"/>
-    <line x1="780" y1="0" x2="780" y2="480"/><line x1="840" y1="0" x2="840" y2="480"/>
+    <line x1="60"  y1="0" x2="60"  y2="480"/> <line x1="120" y1="0" x2="120" y2="480"/>
+    <line x1="180" y1="0" x2="180" y2="480"/> <line x1="240" y1="0" x2="240" y2="480"/>
+    <line x1="300" y1="0" x2="300" y2="480"/> <line x1="360" y1="0" x2="360" y2="480"/>
+    <line x1="420" y1="0" x2="420" y2="480"/> <line x1="480" y1="0" x2="480" y2="480"/>
+    <line x1="540" y1="0" x2="540" y2="480"/> <line x1="600" y1="0" x2="600" y2="480"/>
+    <line x1="660" y1="0" x2="660" y2="480"/> <line x1="720" y1="0" x2="720" y2="480"/>
+    <line x1="780" y1="0" x2="780" y2="480"/> <line x1="840" y1="0" x2="840" y2="480"/>
   </g>
 
-  <!-- Scanline effect -->
-  <rect class="scan-line" x="0" width="900" height="2" fill="#00ffff" opacity="0.05"/>
+  <!-- Scanline -->
+  <rect class="scan" x="0" y="60" width="900" height="2" fill="#00ffff"/>
 
-  <!-- Main border -->
-  <rect x="2" y="2" width="896" height="476" rx="12" fill="none" stroke="#00ffff" stroke-width="1.5" class="border-anim"/>
-  <rect x="6" y="6" width="888" height="468" rx="10" fill="none" stroke="#b700ff" stroke-width="0.5" opacity="0.3"/>
+  <!-- ─── Outer border (animated) ─── -->
+  <rect class="border-outer" x="2" y="2" width="896" height="476" rx="12" fill="none" stroke="#00ffff" stroke-width="1.5" filter="url(#glow-soft)"/>
+  <rect x="6" y="6" width="888" height="468" rx="10" fill="none" stroke="#b700ff" stroke-width=".5" opacity=".3"/>
 
-  <!-- Corner decorations -->
-  <g class="corner" fill="none" stroke="#00ffff" stroke-width="2" filter="url(#glowCyan)">
-    <polyline points="2,30 2,2 30,2"/>
-    <polyline points="870,2 898,2 898,30"/>
-    <polyline points="2,450 2,478 30,478"/>
-    <polyline points="870,478 898,478 898,450"/>
+  <!-- Corner brackets -->
+  <g class="corner" fill="none" stroke="#00ffff" stroke-width="2" filter="url(#glow)">
+    <polyline points="2,32 2,2 32,2"/>
+    <polyline points="868,2 898,2 898,32"/>
+    <polyline points="2,448 2,478 32,478"/>
+    <polyline points="868,478 898,478 898,448"/>
   </g>
 
-  <!-- Header bar -->
-  <rect x="2" y="2" width="896" height="52" rx="12" fill="url(#headerGrad)"/>
-  <rect x="2" y="40" width="896" height="14" fill="url(#bgGrad)" opacity="0.8"/>
+  <!-- ─── Header bar ─── -->
+  <rect x="2" y="2" width="896" height="52" rx="12" fill="url(#hdr)"/>
+  <rect x="2" y="40" width="896" height="14" fill="#070b14" opacity=".9"/>
 
   <!-- Traffic lights -->
   <circle cx="30" cy="27" r="7" fill="#ff5f56"/>
@@ -172,173 +151,183 @@
   <circle cx="74" cy="27" r="7" fill="#27c93f"/>
 
   <!-- Title -->
-  <text x="450" y="32" fill="#00ffff" font-size="15" font-weight="bold" text-anchor="middle" letter-spacing="6" filter="url(#neonText)" class="flicker">◈ FAQIH55 :: NEURAL INTERFACE v2.0 ◈</text>
+  <text x="450" y="33" fill="#00ffff" font-size="14" font-weight="bold" text-anchor="middle"
+        letter-spacing="5" filter="url(#glow)" class="flicker">◈  FAQIH55  ::  NEURAL INTERFACE  v2.0  ◈</text>
 
-  <!-- Status indicator -->
-  <circle cx="860" cy="27" r="5" fill="#00ff88" class="pulse"/>
-  <text x="848" y="31" fill="#00ff88" font-size="11" text-anchor="end" letter-spacing="1">ONLINE</text>
+  <!-- Online status -->
+  <circle class="pulse" cx="858" cy="27" r="5" fill="#00ff88" filter="url(#glow-soft)"/>
+  <text x="847" y="31" fill="#00ff88" font-size="11" text-anchor="end" letter-spacing="1">ONLINE</text>
 
-  <!-- ═══ LEFT PANEL ═══ -->
-  <!-- Identity block -->
-  <rect x="20" y="66" width="310" height="170" rx="8" fill="#0d1424" stroke="#00ffff" stroke-width="0.8" opacity="0.9"/>
-  <rect x="20" y="66" width="310" height="30" rx="8" fill="#00ffff" opacity="0.08"/>
-  <text x="35" y="87" fill="#00ffff" font-size="11" letter-spacing="3" filter="url(#glowSoft)">▸ IDENTITY.SYS</text>
+  <!-- ═══════════════ LEFT PANEL ═══════════════ -->
+  <!-- Identity -->
+  <rect x="20" y="66" width="310" height="170" rx="8" fill="#0d1424" stroke="#00ffff" stroke-width=".8"/>
+  <rect x="20" y="66" width="310" height="30"  rx="8" fill="#00ffff" opacity=".07"/>
+  <text x="36" y="87" fill="#00ffff" font-size="11" letter-spacing="3" filter="url(#glow-soft)">&#9658; IDENTITY.SYS</text>
 
-  <text x="35" y="122" fill="#ffffff" font-size="30" font-weight="bold" letter-spacing="2" filter="url(#neonText)">faqih55</text>
-  <text x="35" y="145" fill="#b700ff" font-size="13" letter-spacing="1" filter="url(#glowSoft)">@lil.fqh  ·  Indonesia 🇮🇩</text>
-  <line x1="35" y1="155" x2="310" y2="155" stroke="#1e2d4a" stroke-width="1"/>
-  <text x="35" y="174" fill="#4a5568" font-size="11" letter-spacing="1">ROLE    ›</text>
-  <text x="105" y="174" fill="#e2e8f0" font-size="11" letter-spacing="1">iOS + Fullstack Developer</text>
-  <text x="35" y="195" fill="#4a5568" font-size="11" letter-spacing="1">MOTTO   ›</text>
-  <text x="105" y="195" fill="#e2e8f0" font-size="11" letter-spacing="1">Humble code, big impact.</text>
-  <text x="35" y="218" fill="#4a5568" font-size="11" letter-spacing="1">FOCUS   ›</text>
-  <text x="105" y="218" fill="#00ff88" font-size="11" letter-spacing="1">Building · Learning · Shipping</text>
+  <text x="36" y="122" fill="#ffffff" font-size="30" font-weight="bold" letter-spacing="2" filter="url(#glow-soft)">faqih55</text>
+  <text x="36" y="145" fill="#b700ff" font-size="12" letter-spacing="1" filter="url(#glow-soft)">@lil.fqh  ·  Indonesia</text>
+  <line x1="36" y1="155" x2="314" y2="155" stroke="#1e2d4a" stroke-width="1"/>
+  <text x="36" y="174" fill="#4a5568" font-size="11">ROLE    &#8250;</text>
+  <text x="106" y="174" fill="#e2e8f0" font-size="11">iOS + Fullstack Developer</text>
+  <text x="36" y="194" fill="#4a5568" font-size="11">MOTTO   &#8250;</text>
+  <text x="106" y="194" fill="#e2e8f0" font-size="11">Humble code, big impact.</text>
+  <text x="36" y="214" fill="#4a5568" font-size="11">FOCUS   &#8250;</text>
+  <text x="106" y="214" fill="#00ff88" font-size="11">Building · Learning · Shipping</text>
 
-  <!-- Specialty tags -->
-  <rect x="20" y="248" width="310" height="110" rx="8" fill="#0d1424" stroke="#b700ff" stroke-width="0.8" opacity="0.9"/>
-  <rect x="20" y="248" width="310" height="30" rx="8" fill="#b700ff" opacity="0.08"/>
-  <text x="35" y="269" fill="#b700ff" font-size="11" letter-spacing="3" filter="url(#glowSoft)">▸ SPECIALIZATIONS</text>
+  <!-- Specializations -->
+  <rect x="20" y="248" width="310" height="110" rx="8" fill="#0d1424" stroke="#b700ff" stroke-width=".8"/>
+  <rect x="20" y="248" width="310" height="30"  rx="8" fill="#b700ff" opacity=".07"/>
+  <text x="36" y="269" fill="#b700ff" font-size="11" letter-spacing="3" filter="url(#glow-soft)">&#9658; SPECIALIZATIONS</text>
 
-  <!-- Tag pills -->
-  <rect x="35" y="283" width="100" height="22" rx="11" fill="none" stroke="#00ffff" stroke-width="1"/>
-  <text x="85" y="298" fill="#00ffff" font-size="10" text-anchor="middle" letter-spacing="1">🍎 iOS / SwiftUI</text>
+  <rect x="36"  y="284" width="100" height="22" rx="11" fill="none" stroke="#00ffff" stroke-width="1"/>
+  <text x="86"  y="299" fill="#00ffff" font-size="10" text-anchor="middle" letter-spacing="1">iOS / SwiftUI</text>
+  <rect x="146" y="284" width="80"  height="22" rx="11" fill="none" stroke="#b700ff" stroke-width="1"/>
+  <text x="186" y="299" fill="#b700ff" font-size="10" text-anchor="middle" letter-spacing="1">Laravel</text>
+  <rect x="236" y="284" width="78"  height="22" rx="11" fill="none" stroke="#ff0080" stroke-width="1"/>
+  <text x="275" y="299" fill="#ff0080" font-size="10" text-anchor="middle" letter-spacing="1">Flutter</text>
 
-  <rect x="145" y="283" width="80" height="22" rx="11" fill="none" stroke="#b700ff" stroke-width="1"/>
-  <text x="185" y="298" fill="#b700ff" font-size="10" text-anchor="middle" letter-spacing="1">⚡ Laravel</text>
+  <rect x="36"  y="316" width="80"  height="22" rx="11" fill="none" stroke="#ffd700" stroke-width="1"/>
+  <text x="76"  y="331" fill="#ffd700" font-size="10" text-anchor="middle" letter-spacing="1">JavaScript</text>
+  <rect x="126" y="316" width="58"  height="22" rx="11" fill="none" stroke="#00ff88" stroke-width="1"/>
+  <text x="155" y="331" fill="#00ff88" font-size="10" text-anchor="middle" letter-spacing="1">PHP</text>
+  <rect x="194" y="316" width="58"  height="22" rx="11" fill="none" stroke="#4a9eff" stroke-width="1"/>
+  <text x="223" y="331" fill="#4a9eff" font-size="10" text-anchor="middle" letter-spacing="1">MySQL</text>
 
-  <rect x="235" y="283" width="80" height="22" rx="11" fill="none" stroke="#ff0080" stroke-width="1"/>
-  <text x="275" y="298" fill="#ff0080" font-size="10" text-anchor="middle" letter-spacing="1">💙 Flutter</text>
+  <!-- Connect -->
+  <rect x="20" y="370" width="310" height="92" rx="8" fill="#0d1424" stroke="#ff0080" stroke-width=".8"/>
+  <rect x="20" y="370" width="310" height="30" rx="8" fill="#ff0080" opacity=".07"/>
+  <text x="36" y="391" fill="#ff0080" font-size="11" letter-spacing="3" filter="url(#glow-soft)">&#9658; CONNECT.IO</text>
+  <text x="36" y="414" fill="#4a5568" font-size="11">GH</text>
+  <text x="58" y="414" fill="#1e2d4a" font-size="11">&#8250;</text>
+  <text x="72" y="414" fill="#e2e8f0" font-size="11">github.com/faqih55</text>
+  <text x="36" y="434" fill="#4a5568" font-size="11">IG</text>
+  <text x="58" y="434" fill="#1e2d4a" font-size="11">&#8250;</text>
+  <text x="72" y="434" fill="#e2e8f0" font-size="11">instagram.com/lil.fqh</text>
+  <text x="36" y="454" fill="#4a5568" font-size="11">ML</text>
+  <text x="58" y="454" fill="#1e2d4a" font-size="11">&#8250;</text>
+  <text x="72" y="454" fill="#e2e8f0" font-size="11">faqihmuhamad553@gmail.com</text>
 
-  <rect x="35" y="315" width="80" height="22" rx="11" fill="none" stroke="#ffd700" stroke-width="1"/>
-  <text x="75" y="330" fill="#ffd700" font-size="10" text-anchor="middle" letter-spacing="1">🟨 JavaScript</text>
-
-  <rect x="125" y="315" width="60" height="22" rx="11" fill="none" stroke="#00ff88" stroke-width="1"/>
-  <text x="155" y="330" fill="#00ff88" font-size="10" text-anchor="middle" letter-spacing="1">🐘 PHP</text>
-
-  <rect x="195" y="315" width="60" height="22" rx="11" fill="none" stroke="#4a9eff" stroke-width="1"/>
-  <text x="225" y="330" fill="#4a9eff" font-size="10" text-anchor="middle" letter-spacing="1">🗄️ MySQL</text>
-
-  <!-- Contact links -->
-  <rect x="20" y="370" width="310" height="92" rx="8" fill="#0d1424" stroke="#ff0080" stroke-width="0.8" opacity="0.9"/>
-  <rect x="20" y="370" width="310" height="30" rx="8" fill="#ff0080" opacity="0.08"/>
-  <text x="35" y="391" fill="#ff0080" font-size="11" letter-spacing="3" filter="url(#glowSoft)">▸ CONNECT.IO</text>
-  <text x="35" y="415" fill="#4a5568" font-size="11">GH  ›</text>
-  <text x="70" y="415" fill="#e2e8f0" font-size="11">github.com/faqih55</text>
-  <text x="35" y="436" fill="#4a5568" font-size="11">IG  ›</text>
-  <text x="70" y="436" fill="#e2e8f0" font-size="11">instagram.com/lil.fqh</text>
-  <text x="35" y="457" fill="#4a5568" font-size="11">ML  ›</text>
-  <text x="70" y="457" fill="#e2e8f0" font-size="11">faqihmuhamad553@gmail.com</text>
-
-  <!-- ═══ CENTER DIVIDER ═══ -->
+  <!-- Left / Center divider -->
   <line x1="345" y1="66" x2="345" y2="474" stroke="#1e2d4a" stroke-width="1.5"/>
 
-  <!-- ═══ CENTER PANEL — TERMINAL ═══ -->
-  <rect x="355" y="66" width="280" height="398" rx="8" fill="#0d1424" stroke="#00ffff" stroke-width="0.8" opacity="0.9"/>
-  <rect x="355" y="66" width="280" height="30" rx="8" fill="#00ffff" opacity="0.06"/>
-  <text x="370" y="87" fill="#00ffff" font-size="11" letter-spacing="3" filter="url(#glowSoft)">▸ TERMINAL.SH</text>
+  <!-- ═══════════════ CENTER PANEL — TERMINAL ═══════════════ -->
+  <rect x="355" y="66" width="280" height="398" rx="8" fill="#0d1424" stroke="#00ffff" stroke-width=".8"/>
+  <rect x="355" y="66" width="280" height="30"  rx="8" fill="#00ffff" opacity=".06"/>
+  <text x="370" y="87" fill="#00ffff" font-size="11" letter-spacing="3" filter="url(#glow-soft)">&#9658; TERMINAL.SH</text>
 
-  <!-- Command prompt lines -->
+  <!-- Terminal content -->
   <g font-size="12">
-    <g class="t1">
-      <text x="370" y="120" fill="#b700ff">❯</text>
-      <text x="383" y="120" fill="#e2e8f0">whoami</text>
+    <!-- whoami -->
+    <g class="l0">
+      <text x="370" y="120" fill="#b700ff">&#10095;</text>
+      <text x="384" y="120" fill="#e2e8f0">whoami</text>
     </g>
-    <g class="t2">
-      <text x="380" y="138" fill="#00ff88">faqih55 — iOS &amp; Fullstack Dev</text>
-    </g>
-
-    <g class="t3">
-      <text x="370" y="162" fill="#b700ff">❯</text>
-      <text x="383" y="162" fill="#e2e8f0">cat about.txt</text>
-    </g>
-    <g class="t4">
-      <text x="380" y="180" fill="#4a5568">————————————————</text>
-      <text x="380" y="196" fill="#00ffff">Passionate developer crafting</text>
-      <text x="380" y="212" fill="#00ffff">clean, scalable solutions for</text>
-      <text x="380" y="228" fill="#00ffff">iOS and the Web.</text>
+    <g class="l1">
+      <text x="382" y="138" fill="#00ff88">faqih55 — iOS &amp; Fullstack Dev</text>
     </g>
 
-    <g class="t5">
-      <text x="370" y="252" fill="#b700ff">❯</text>
-      <text x="383" y="252" fill="#e2e8f0">ls projects/</text>
+    <!-- about -->
+    <g class="l2">
+      <text x="370" y="162" fill="#b700ff">&#10095;</text>
+      <text x="384" y="162" fill="#e2e8f0">cat about.txt</text>
     </g>
-    <g class="t6">
-      <text x="380" y="270" fill="#ffd700">📂 XDREW/</text>
-      <text x="380" y="286" fill="#ffd700">📂 Drew-Music/</text>
-      <text x="380" y="302" fill="#4a5568">+ more in progress...</text>
-    </g>
-
-    <g class="t7">
-      <text x="370" y="326" fill="#b700ff">❯</text>
-      <text x="383" y="326" fill="#e2e8f0">echo $PHILOSOPHY</text>
-    </g>
-    <g class="t8">
-      <text x="380" y="344" fill="#ff0080">"I don't just write code —</text>
-      <text x="380" y="360" fill="#ff0080"> I build experiences."</text>
+    <g class="l3">
+      <text x="382" y="180" fill="#4a5568">————————————————</text>
+      <text x="382" y="196" fill="#00ffff">Passionate dev crafting clean,</text>
+      <text x="382" y="212" fill="#00ffff">scalable iOS &amp; web solutions.</text>
     </g>
 
-    <!-- Static final prompt with cursor -->
-    <g opacity="0">
-      <!-- this stays invisible until after animations -->
+    <!-- projects -->
+    <g class="l4">
+      <text x="370" y="236" fill="#b700ff">&#10095;</text>
+      <text x="384" y="236" fill="#e2e8f0">ls projects/</text>
     </g>
-    <text x="370" y="392" fill="#b700ff" class="t8">❯</text>
-    <text x="383" y="392" fill="#4a5568" class="t8">npm run dream</text>
-    <rect x="383" y="404" width="9" height="14" fill="#00ffff" class="cursor t8"/>
+    <g class="l5">
+      <text x="382" y="254" fill="#ffd700">&#128193; XDREW/</text>
+      <text x="382" y="270" fill="#ffd700">&#128193; Drew-Music/</text>
+      <text x="382" y="286" fill="#4a5568">+ more in progress...</text>
+    </g>
 
-    <!-- Bottom status -->
-    <text x="495" y="450" fill="#1e2d4a" font-size="10" text-anchor="middle" letter-spacing="2">[ SYSTEM READY ]</text>
-    <line x1="370" y1="440" x2="620" y2="440" stroke="#1e2d4a" stroke-width="0.5"/>
-    <text x="370" y="458" fill="#1e2d4a" font-size="9">PID: 2025 · MEM: ∞ · CPU: 100% PASSION</text>
+    <!-- philosophy -->
+    <g class="l6">
+      <text x="370" y="310" fill="#b700ff">&#10095;</text>
+      <text x="384" y="310" fill="#e2e8f0">echo $PHILOSOPHY</text>
+    </g>
+    <g class="l7">
+      <text x="382" y="328" fill="#ff0080">"I don't just write code —</text>
+      <text x="382" y="344" fill="#ff0080"> I build experiences."</text>
+    </g>
+
+    <!-- final prompt -->
+    <g class="l8">
+      <text x="370" y="374" fill="#b700ff">&#10095;</text>
+      <text x="384" y="374" fill="#4a5568">npm run dream</text>
+      <rect class="cursor" x="384" y="382" width="9" height="14" fill="#00ffff"/>
+    </g>
+
+    <!-- footer -->
+    <line x1="370" y1="434" x2="618" y2="434" stroke="#1e2d4a" stroke-width=".5"/>
+    <text x="494" y="450" fill="#1e2d4a" font-size="10" text-anchor="middle" letter-spacing="2">[ SYSTEM READY ]</text>
+    <text x="370" y="462" fill="#1e2d4a" font-size="9">PID:2025  MEM:&#8734;  CPU:100% PASSION</text>
   </g>
 
-  <!-- ═══ RIGHT DIVIDER ═══ -->
+  <!-- Center / Right divider -->
   <line x1="648" y1="66" x2="648" y2="474" stroke="#1e2d4a" stroke-width="1.5"/>
 
-  <!-- ═══ RIGHT PANEL — SKILLS ═══ -->
-  <rect x="658" y="66" width="224" height="398" rx="8" fill="#0d1424" stroke="#b700ff" stroke-width="0.8" opacity="0.9"/>
-  <rect x="658" y="66" width="224" height="30" rx="8" fill="#b700ff" opacity="0.06"/>
-  <text x="673" y="87" fill="#b700ff" font-size="11" letter-spacing="3" filter="url(#glowSoft)">▸ SKILL.MATRIX</text>
+  <!-- ═══════════════ RIGHT PANEL — SKILL MATRIX ═══════════════ -->
+  <rect x="658" y="66" width="224" height="398" rx="8" fill="#0d1424" stroke="#b700ff" stroke-width=".8"/>
+  <rect x="658" y="66" width="224" height="30"  rx="8" fill="#b700ff" opacity=".06"/>
+  <text x="673" y="87" fill="#b700ff" font-size="11" letter-spacing="3" filter="url(#glow-soft)">&#9658; SKILL.MATRIX</text>
 
-  <!-- Skill bars -->
-  <text x="673" y="214" fill="#4a5568" font-size="10" letter-spacing="1">Swift / SwiftUI</text>
-  <text x="868" y="214" fill="#ff0080" font-size="10" text-anchor="end">92%</text>
-  <rect x="673" y="220" width="202" height="10" rx="5" fill="#1e2d4a"/>
-  <g clip-path="url(#barClip1)"><rect x="673" y="220" width="186" height="10" rx="5" fill="url(#barSwift)" class="bar-swift" filter="url(#glowSoft)"/></g>
+  <!-- Bar: Swift -->
+  <text x="673" y="215" fill="#4a5568" font-size="10" letter-spacing="1">Swift / SwiftUI</text>
+  <text x="868" y="215" fill="#ff0080" font-size="10" text-anchor="end">92%</text>
+  <rect x="673" y="222" width="202" height="10" rx="5" fill="#1e2d4a"/>
+  <g clip-path="url(#c1)">
+    <rect class="b1" x="673" y="222" width="186" height="10" rx="5" fill="url(#gSwift)" filter="url(#glow-soft)"/>
+  </g>
 
-  <text x="673" y="250" fill="#4a5568" font-size="10" letter-spacing="1">PHP / Laravel</text>
-  <text x="868" y="250" fill="#b700ff" font-size="10" text-anchor="end">88%</text>
-  <rect x="673" y="256" width="202" height="10" rx="5" fill="#1e2d4a"/>
-  <g clip-path="url(#barClip2)"><rect x="673" y="256" width="178" height="10" rx="5" fill="url(#barPHP)" class="bar-php" filter="url(#glowSoft)"/></g>
+  <!-- Bar: PHP -->
+  <text x="673" y="252" fill="#4a5568" font-size="10" letter-spacing="1">PHP / Laravel</text>
+  <text x="868" y="252" fill="#b700ff" font-size="10" text-anchor="end">88%</text>
+  <rect x="673" y="260" width="202" height="10" rx="5" fill="#1e2d4a"/>
+  <g clip-path="url(#c2)">
+    <rect class="b2" x="673" y="260" width="178" height="10" rx="5" fill="url(#gPHP)" filter="url(#glow-soft)"/>
+  </g>
 
-  <text x="673" y="288" fill="#4a5568" font-size="10" letter-spacing="1">Dart / Flutter</text>
-  <text x="868" y="288" fill="#00ffff" font-size="10" text-anchor="end">82%</text>
-  <rect x="673" y="294" width="202" height="10" rx="5" fill="#1e2d4a"/>
-  <g clip-path="url(#barClip3)"><rect x="673" y="294" width="166" height="10" rx="5" fill="url(#barFlutter)" class="bar-flutter" filter="url(#glowSoft)"/></g>
+  <!-- Bar: Flutter -->
+  <text x="673" y="290" fill="#4a5568" font-size="10" letter-spacing="1">Dart / Flutter</text>
+  <text x="868" y="290" fill="#00ffff" font-size="10" text-anchor="end">82%</text>
+  <rect x="673" y="298" width="202" height="10" rx="5" fill="#1e2d4a"/>
+  <g clip-path="url(#c3)">
+    <rect class="b3" x="673" y="298" width="166" height="10" rx="5" fill="url(#gFlutter)" filter="url(#glow-soft)"/>
+  </g>
 
-  <text x="673" y="326" fill="#4a5568" font-size="10" letter-spacing="1">JavaScript</text>
-  <text x="868" y="326" fill="#ffd700" font-size="10" text-anchor="end">78%</text>
-  <rect x="673" y="332" width="202" height="10" rx="5" fill="#1e2d4a"/>
-  <g clip-path="url(#barClip4)"><rect x="673" y="332" width="158" height="10" rx="5" fill="url(#barJS)" class="bar-js" filter="url(#glowSoft)"/></g>
+  <!-- Bar: JS -->
+  <text x="673" y="328" fill="#4a5568" font-size="10" letter-spacing="1">JavaScript</text>
+  <text x="868" y="328" fill="#ffd700" font-size="10" text-anchor="end">78%</text>
+  <rect x="673" y="336" width="202" height="10" rx="5" fill="#1e2d4a"/>
+  <g clip-path="url(#c4)">
+    <rect class="b4" x="673" y="336" width="158" height="10" rx="5" fill="url(#gJS)" filter="url(#glow-soft)"/>
+  </g>
 
-  <line x1="673" y1="360" x2="868" y2="360" stroke="#1e2d4a" stroke-width="0.8"/>
+  <line x1="673" y1="362" x2="868" y2="362" stroke="#1e2d4a" stroke-width=".8"/>
 
-  <!-- Tools section -->
+  <!-- Tools -->
   <text x="673" y="378" fill="#4a5568" font-size="10" letter-spacing="2">TOOLS &amp; PLATFORMS</text>
-
   <text x="673" y="398" fill="#00ffff" font-size="11">Xcode</text>
-  <text x="720" y="398" fill="#1e2d4a" font-size="11">·</text>
-  <text x="730" y="398" fill="#00ffff" font-size="11">VS Code</text>
-  <text x="790" y="398" fill="#1e2d4a" font-size="11">·</text>
-  <text x="800" y="398" fill="#00ffff" font-size="11">Git</text>
-
+  <text x="726" y="398" fill="#1e2d4a" font-size="11">·</text>
+  <text x="736" y="398" fill="#00ffff" font-size="11">VS Code</text>
+  <text x="800" y="398" fill="#1e2d4a" font-size="11">·</text>
+  <text x="810" y="398" fill="#00ffff" font-size="11">Git</text>
   <text x="673" y="416" fill="#b700ff" font-size="11">Android Studio</text>
-  <text x="785" y="416" fill="#1e2d4a" font-size="11">·</text>
-  <text x="795" y="416" fill="#b700ff" font-size="11">MySQL</text>
+  <text x="788" y="416" fill="#1e2d4a" font-size="11">·</text>
+  <text x="798" y="416" fill="#b700ff" font-size="11">MySQL</text>
 
-  <line x1="673" y1="428" x2="868" y2="428" stroke="#1e2d4a" stroke-width="0.8"/>
+  <line x1="673" y1="428" x2="868" y2="428" stroke="#1e2d4a" stroke-width=".8"/>
 
-  <!-- Bottom stats -->
+  <!-- Metrics -->
   <text x="673" y="444" fill="#4a5568" font-size="10" letter-spacing="2">SYSTEM METRICS</text>
-  <text x="673" y="462" fill="#4a5568" font-size="10">COMMITS  ›</text>
-  <text x="750" y="462" fill="#00ff88" font-size="10">∞ (active)</text>
+  <text x="673" y="462" fill="#4a5568" font-size="10">COMMITS  &#8250;</text>
+  <text x="752" y="462" fill="#00ff88" font-size="10">&#8734; (active)</text>
 </svg>
