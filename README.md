@@ -1,6 +1,6 @@
 <div align="center">
 
-[![header](https://capsule-render.vercel.app/api?type=venom&color=0:070b14,30:00ffff,60:b700ff,100:070b14&height=220&section=header&text=FAQIH55&fontColor=00ffff&fontSize=80&fontAlignY=40&animation=fadeIn&desc=iOS%20Developer%20%C2%B7%20Fullstack%20Engineer%20%C2%B7%20Digital%20Craftsman&descColor=e2e8f0&descSize=17&descAlignY=62&stroke=00ffff&strokeWidth=2)](https://github.com/faqih55)
+[![FAQIH55 Header](header.svg)](https://github.com/faqih55)
 
 <a href="https://github.com/faqih55">
   <img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&weight=700&size=20&duration=3000&pause=800&color=00FFFF&center=true&vCenter=true&width=750&lines=%E2%97%88+Hello%2C+World!+I+am+faqih55+%E2%97%88;%F0%9F%8D%8E+Building+iOS+apps+with+SwiftUI;%E2%9A%A1+Fullstack+Developer+%7C+Laravel+%2B+PHP;%F0%9F%92%99+Cross-Platform+with+Flutter+%26+Dart;%F0%9F%8C%90+Web+Craftsman+%7C+HTML+%2B+CSS+%2B+JS;%F0%9F%9A%80+Turning+ideas+into+digital+reality;%E2%9C%A8+Welcome+to+my+digital+universe" alt="Typing SVG" />
@@ -166,6 +166,6 @@
 
 <br/>
 
-[![footer](https://capsule-render.vercel.app/api?type=venom&color=0:070b14,30:b700ff,60:00ffff,100:070b14&height=120&section=footer&animation=fadeIn)](https://github.com/faqih55)
+[![FAQIH55 Footer](footer.svg)](https://github.com/faqih55)
 
 </div>
