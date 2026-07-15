@@ -15,7 +15,7 @@
 <img src="https://img.shields.io/badge/iOS-DEVELOPER-147EFB?style=for-the-badge&logo=apple&logoColor=white&labelColor=0d1117" />
 <img src="https://img.shields.io/badge/FULLSTACK-DEVELOPER-7c3aed?style=for-the-badge&logo=stackblitz&logoColor=white&labelColor=0d1117" />
 <img src="https://img.shields.io/badge/OPEN_TO-COLLABORATE-00d4ff?style=for-the-badge&logo=handshake&logoColor=white&labelColor=0d1117" />
-<img src="https://img.shields.io/badge/BASED_IN-INDONESIA%20🇮🇩-ff6b6b?style=for-the-badge&labelColor=0d1117" />
+<img src="https://img.shields.io/badge/BASED_IN-INDONESIA%20%F0%9F%87%AE%F0%9F%87%A9-ff6b6b?style=for-the-badge&labelColor=0d1117" />
 
 </div>
 
@@ -132,9 +132,9 @@
 <br/>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake.svg" />
-  <img alt="contribution snake animation" src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/faqih55/faqih55/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/faqih55/faqih55/output/github-contribution-grid-snake.svg" />
+  <img alt="contribution snake animation" src="https://raw.githubusercontent.com/faqih55/faqih55/output/github-contribution-grid-snake-dark.svg" />
 </picture>
 
 </div>
