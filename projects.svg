@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240" width="800" height="240">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&amp;display=swap');
+            .text-title { font-family: 'Share Tech Mono', monospace; font-size: 22px; fill: #ff0080; font-weight: bold; }
+            .text-proj { font-family: 'Share Tech Mono', monospace; font-size: 24px; fill: #ffffff; font-weight: bold; }
+            .text-desc { font-family: 'Share Tech Mono', monospace; font-size: 14px; fill: #8b9bb4; }
+            .text-tag { font-family: 'Share Tech Mono', monospace; font-size: 12px; fill: #00ffff; }
+            
+            .card-bg { fill: #070b14; stroke: #ff0080; stroke-width: 1; }
+            .card-glow { fill: none; stroke: #ff0080; stroke-width: 4; opacity: 0.3; filter: blur(4px); }
+            
+            @keyframes slideRight {
+                0% { transform: translateX(0px); opacity: 0.5; }
+                50% { transform: translateX(5px); opacity: 1; }
+                100% { transform: translateX(0px); opacity: 0.5; }
+            }
+            .arrow-anim { animation: slideRight 2s infinite; }
+        </style>
+        
+        <filter id="neonPink" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="3" result="blur" />
+            <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <filter id="neonCyan" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="3" result="blur" />
+            <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+    </defs>
+
+    <!-- Background -->
+    <rect width="800" height="240" fill="#0d1117" rx="10" />
+
+    <text x="30" y="40" class="text-title" filter="url(#neonPink)">>_ FEATURED_PROJECTS</text>
+
+    <!-- Project 1: XDREW -->
+    <g transform="translate(30, 70)">
+        <rect class="card-glow" width="350" height="140" rx="8" />
+        <rect class="card-bg" width="350" height="140" rx="8" />
+        
+        <text x="25" y="40" class="text-proj">XDREW</text>
+        <text x="25" y="70" class="text-desc">Full-stack CMS where backend craft</text>
+        <text x="25" y="90" class="text-desc">meets frontend art.</text>
+        
+        <!-- Tags -->
+        <rect x="25" y="105" width="70" height="20" fill="#00ffff" opacity="0.1" rx="10" />
+        <text x="60" y="120" class="text-tag" text-anchor="middle">Laravel</text>
+        
+        <rect x="105" y="105" width="50" height="20" fill="#00ffff" opacity="0.1" rx="10" />
+        <text x="130" y="120" class="text-tag" text-anchor="middle">PHP</text>
+        
+        <rect x="165" y="105" width="60" height="20" fill="#00ffff" opacity="0.1" rx="10" />
+        <text x="195" y="120" class="text-tag" text-anchor="middle">MySQL</text>
+
+        <!-- Arrow -->
+        <g class="arrow-anim" transform="translate(310, 30)">
+            <path d="M0,0 L10,0 L5,-5 M10,0 L5,5" fill="none" stroke="#00ffff" stroke-width="2" filter="url(#neonCyan)"/>
+        </g>
+    </g>
+
+    <!-- Project 2: Drew-Music -->
+    <g transform="translate(420, 70)">
+        <rect class="card-glow" width="350" height="140" rx="8" />
+        <rect class="card-bg" width="350" height="140" rx="8" />
+        
+        <text x="25" y="40" class="text-proj">Drew-Music</text>
+        <text x="25" y="70" class="text-desc">iOS music player — native, fluid,</text>
+        <text x="25" y="90" class="text-desc">and unapologetically Apple.</text>
+        
+        <!-- Tags -->
+        <rect x="25" y="105" width="60" height="20" fill="#00ffff" opacity="0.1" rx="10" />
+        <text x="55" y="120" class="text-tag" text-anchor="middle">Swift</text>
+        
+        <rect x="95" y="105" width="70" height="20" fill="#00ffff" opacity="0.1" rx="10" />
+        <text x="130" y="120" class="text-tag" text-anchor="middle">SwiftUI</text>
+        
+        <rect x="175" y="105" width="60" height="20" fill="#00ffff" opacity="0.1" rx="10" />
+        <text x="205" y="120" class="text-tag" text-anchor="middle">Xcode</text>
+
+        <!-- Arrow -->
+        <g class="arrow-anim" transform="translate(310, 30)">
+            <path d="M0,0 L10,0 L5,-5 M10,0 L5,5" fill="none" stroke="#00ffff" stroke-width="2" filter="url(#neonCyan)"/>
+        </g>
+    </g>
+
+</svg>

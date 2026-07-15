@@ -76,17 +76,8 @@
 
 <br/>
 
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=faqih55&show_icons=true&theme=tokyonight&title_color=00ffff&text_color=e2e8f0&icon_color=b700ff&border_color=00ffff&bg_color=0d1117&hide_border=false&rank_icon=percentile&include_all_commits=true&count_private=true&card_width=450" />
-<img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=faqih55&theme=tokyonight&background=0d1117&border=00ffff&ring=00ffff&fire=ff0080&currStreakLabel=00ffff&sideLabels=e2e8f0&sideNums=ffffff&currStreakNum=00ffff&dates=4a5568" />
-
-<br/>
-
-<img width="38%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=faqih55&layout=donut&theme=tokyonight&title_color=00ffff&text_color=e2e8f0&border_color=00ffff&bg_color=0d1117&langs_count=8&hide_border=false" />
-<img width="59%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=faqih55&theme=tokyonight" />
-
-<br/>
-
-![trophy](https://github-profile-trophy.vercel.app/?username=faqih55&theme=tokyonight&no-frame=false&no-bg=false&margin-w=6&column=6&rank=SECRET,SSS,SS,S,AAA,AA,A,B)
+<!-- Custom Cyberpunk Stats Dashboard -->
+<img width="100%" src="stats.svg?v=1" alt="Faqih55 Stats Dashboard" />
 
 </div>
 
@@ -102,17 +93,10 @@
 
 <br/>
 
-<!-- XDREW -->
-<a href="https://github.com/faqih55/XDREW">
-  <img align="left" width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=faqih55&repo=XDREW&theme=tokyonight&title_color=00ffff&text_color=e2e8f0&icon_color=ff0080&border_color=00ffff&bg_color=0d1117&description_lines_count=3" />
-</a>
+<!-- Custom Cyberpunk Projects Cards -->
+<img width="100%" src="projects.svg?v=1" alt="Faqih55 Featured Projects" />
 
-<!-- Drew-Music -->
-<a href="https://github.com/faqih55/Drew-Music">
-  <img align="right" width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=faqih55&repo=Drew-Music&theme=tokyonight&title_color=00ffff&text_color=e2e8f0&icon_color=ff0080&border_color=00ffff&bg_color=0d1117&description_lines_count=3" />
-</a>
-
-<br clear="both"/><br/>
+<br/>
 
 | 🚀 Project | 🛠 Stack | 💡 Soul |
 |:----------:|:--------:|:-------:|
