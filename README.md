@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Animated Header Banner -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:00d4ff,100:7c3aed&height=200&section=header&text=faqih55&fontSize=70&fontColor=00d4ff&fontAlignY=38&animation=fadeIn&desc=iOS%20Dev%20%7C%20Frontend%20%26%20Backend%20%7C%20Humble%20Programmer&descAlignY=60&descSize=18&descColor=a78bfa" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:00d4ff,100:7c3aed&height=200&section=header&text=faqih55&fontSize=70&fontColor=00d4ff&fontAlignY=38&animation=fadeIn&desc=iOS%20Dev%20%7C%20Frontend%20%26%20Backend%20%7C%20Humble%20Programmer&descAlignY=60&descSize=18&descColor=a78bfa&v=2" />
 
 <!-- Typing Animation -->
 <a href="https://github.com/faqih55">
@@ -22,11 +22,7 @@
 ---
 
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/faqih55/faqih55/main/profile.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/faqih55/faqih55/main/profile.svg">
-    <img alt="Faqih Terminal Profile" src="https://raw.githubusercontent.com/faqih55/faqih55/main/profile.svg">
-  </picture>
+  <img alt="Faqih Terminal Profile" src="profile.svg">
 </div>
 
 <!-- Tech Stack -->
