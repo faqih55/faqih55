@@ -1,21 +1,28 @@
 <div align="center">
 
-<!-- Animated Header Banner -->
-[![Header](https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:00d4ff,100:7c3aed&height=200&section=header&text=faqih55&fontSize=70&fontColor=00d4ff&fontAlignY=38&animation=fadeIn&desc=iOS%20Dev%20%7C%20Frontend%20%26%20Backend%20%7C%20Humble%20Programmer&descAlignY=60&descSize=18&descColor=a78bfa&v=4)](https://github.com/faqih55)
+[![header](https://capsule-render.vercel.app/api?type=venom&color=0:070b14,30:00ffff,60:b700ff,100:070b14&height=220&section=header&text=FAQIH55&fontColor=00ffff&fontSize=80&fontAlignY=40&animation=fadeIn&desc=iOS%20Developer%20·%20Fullstack%20Engineer%20·%20Digital%20Craftsman&descColor=e2e8f0&descSize=17&descAlignY=62&stroke=00ffff&strokeWidth=2)](https://github.com/faqih55)
 
-<!-- Typing Animation -->
+<!-- Typing SVG -->
 <a href="https://github.com/faqih55">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&pause=1000&color=00D4FF&center=true&vCenter=true&width=700&lines=Hello%2C+World!+%F0%9F%8C%90;iOS+Developer+%7C+SwiftUI+Enthusiast+%F0%9F%8D%8E;Frontend+%26+Backend+Developer;Humble+Programmer+who+loves+clean+code.;Building+apps+for+Apple+ecosystem+%F0%9F%9A%80;Welcome+to+my+digital+universe+%E2%9C%A8" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&weight=700&size=20&duration=3000&pause=800&color=00FFFF&center=true&vCenter=true&multiline=false&width=750&lines=◈+Hello%2C+World!+I+am+faqih55+◈;🍎+Building+iOS+apps+with+SwiftUI;⚡+Fullstack+Developer+%7C+Laravel+%2B+PHP;💙+Cross-Platform+with+Flutter+%26+Dart;🌐+Web+Craftsman+%7C+HTML+%2B+CSS+%2B+JS;🚀+Turning+ideas+into+digital+reality;✨+Welcome+to+my+digital+universe" alt="Typing SVG" />
 </a>
 
 <br/>
 
-<!-- Status Badges -->
-<img src="https://img.shields.io/badge/STATUS-ONLINE-00d4ff?style=for-the-badge&logo=statuspage&logoColor=white&labelColor=0d1117" />
-<img src="https://img.shields.io/badge/iOS-DEVELOPER-147EFB?style=for-the-badge&logo=apple&logoColor=white&labelColor=0d1117" />
-<img src="https://img.shields.io/badge/FULLSTACK-DEVELOPER-7c3aed?style=for-the-badge&logo=stackblitz&logoColor=white&labelColor=0d1117" />
-<img src="https://img.shields.io/badge/OPEN_TO-COLLABORATE-00d4ff?style=for-the-badge&logo=handshake&logoColor=white&labelColor=0d1117" />
-<img src="https://img.shields.io/badge/BASED_IN-INDONESIA%20%F0%9F%87%AE%F0%9F%87%A9-ff6b6b?style=for-the-badge&labelColor=0d1117" />
+<!-- Badges -->
+<img src="https://img.shields.io/badge/◈_STATUS-ONLINE-00ffff?style=for-the-badge&labelColor=070b14&color=00ffff" />
+<img src="https://img.shields.io/badge/⚡_iOS-DEVELOPER-b700ff?style=for-the-badge&logo=apple&logoColor=white&labelColor=070b14" />
+<img src="https://img.shields.io/badge/🌐_FULLSTACK-ENGINEER-ff0080?style=for-the-badge&logo=stackblitz&logoColor=white&labelColor=070b14" />
+<img src="https://img.shields.io/badge/🇮🇩_BASED-INDONESIA-ffd700?style=for-the-badge&labelColor=070b14" />
+
+</div>
+
+---
+
+<!-- Terminal Profile Card -->
+<div align="center">
+
+![Faqih Neural Interface](profile.svg)
 
 </div>
 
@@ -23,18 +30,11 @@
 
 <div align="center">
 
-![Faqih Terminal Profile](profile.svg)
-
-</div>
-
-<!-- Tech Stack -->
-<div align="center">
-
 ## ◈ TECH ARSENAL
 
 <br/>
 
-**🍎 iOS Development**
+**🍎 iOS Ecosystem**
 
 <img src="https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white" />
 <img src="https://img.shields.io/badge/SwiftUI-147EFB?style=for-the-badge&logo=swift&logoColor=white" />
@@ -43,14 +43,14 @@
 
 <br/><br/>
 
-**📱 Mobile & Cross-Platform**
+**💙 Mobile & Cross-Platform**
 
 <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" />
 <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" />
 
 <br/><br/>
 
-**🌐 Frontend & Backend**
+**🌐 Web Stack**
 
 <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" />
 <img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" />
@@ -61,7 +61,7 @@
 
 <br/><br/>
 
-**🛠️ Tools & Platforms**
+**🛠 Tools & Infrastructure**
 
 <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
 <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
@@ -80,18 +80,18 @@
 
 <br/>
 
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=faqih55&show_icons=true&theme=transparent&title_color=00d4ff&text_color=c9d1d9&icon_color=7c3aed&border_color=30363d&bg_color=0d1117&hide_border=false&rank_icon=github" />
-<img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=faqih55&theme=transparent&background=0d1117&border=30363d&ring=00d4ff&fire=7c3aed&currStreakLabel=00d4ff&sideLabels=c9d1d9&sideNums=c9d1d9&currStreakNum=ffffff&dates=8b949e" />
+<img width="49%" src="https://github-readme-stats.vercel.app/api?username=faqih55&show_icons=true&theme=transparent&title_color=00ffff&text_color=e2e8f0&icon_color=b700ff&border_color=1e2d4a&bg_color=070b14&hide_border=false&rank_icon=github&include_all_commits=true&count_private=true" />
+<img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=faqih55&theme=transparent&background=070b14&border=1e2d4a&ring=00ffff&fire=b700ff&currStreakLabel=00ffff&sideLabels=e2e8f0&sideNums=e2e8f0&currStreakNum=ffffff&dates=4a5568" />
 
 <br/>
 
-<img width="40%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=faqih55&layout=compact&theme=transparent&title_color=00d4ff&text_color=c9d1d9&border_color=30363d&bg_color=0d1117&langs_count=6" />
+<img width="40%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=faqih55&layout=compact&theme=transparent&title_color=00ffff&text_color=e2e8f0&border_color=1e2d4a&bg_color=070b14&langs_count=6&hide_border=false" />
 
 </div>
 
 ---
 
-<!-- Projects Section -->
+<!-- Projects -->
 <div align="center">
 
 ## ◈ FEATURED PROJECTS
@@ -99,10 +99,10 @@
 <br/>
 
 <a href="https://github.com/faqih55/XDREW">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=faqih55&repo=XDREW&theme=transparent&title_color=00d4ff&text_color=c9d1d9&icon_color=7c3aed&border_color=30363d&bg_color=0d1117" />
+  <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=faqih55&repo=XDREW&theme=transparent&title_color=00ffff&text_color=e2e8f0&icon_color=b700ff&border_color=1e2d4a&bg_color=070b14" />
 </a>
 <a href="https://github.com/faqih55/Drew-Music">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=faqih55&repo=Drew-Music&theme=transparent&title_color=00d4ff&text_color=c9d1d9&icon_color=7c3aed&border_color=30363d&bg_color=0d1117" />
+  <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=faqih55&repo=Drew-Music&theme=transparent&title_color=00ffff&text_color=e2e8f0&icon_color=b700ff&border_color=1e2d4a&bg_color=070b14" />
 </a>
 
 </div>
@@ -116,7 +116,7 @@
 
 <br/>
 
-<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=faqih55&bg_color=0d1117&color=00d4ff&line=7c3aed&point=ffffff&area=true&area_color=7c3aed&border_color=30363d&hide_border=false&radius=6" />
+<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=faqih55&bg_color=070b14&color=00ffff&line=b700ff&point=ff0080&area=true&area_color=b700ff&border_color=1e2d4a&hide_border=false&radius=6" />
 
 </div>
 
@@ -132,35 +132,35 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/faqih55/faqih55/output/github-contribution-grid-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/faqih55/faqih55/output/github-contribution-grid-snake.svg" />
-  <img alt="contribution snake animation" src="https://raw.githubusercontent.com/faqih55/faqih55/output/github-contribution-grid-snake-dark.svg" />
+  <img alt="contribution snake" src="https://raw.githubusercontent.com/faqih55/faqih55/output/github-contribution-grid-snake-dark.svg" />
 </picture>
 
 </div>
 
 ---
 
-<!-- Profile Views & Socials -->
+<!-- Connect -->
 <div align="center">
 
-## ◈ CONNECT WITH ME
+## ◈ CONNECT
 
 <br/>
 
 <a href="https://github.com/faqih55">
-  <img src="https://img.shields.io/badge/GitHub-faqih55-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=0d1117" />
+  <img src="https://img.shields.io/badge/GitHub-faqih55-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=070b14" />
 </a>
 &nbsp;
 <a href="https://instagram.com/lil.fqh">
-  <img src="https://img.shields.io/badge/Instagram-lil.fqh-E4405F?style=for-the-badge&logo=instagram&logoColor=white&labelColor=0d1117" />
+  <img src="https://img.shields.io/badge/Instagram-lil.fqh-E4405F?style=for-the-badge&logo=instagram&logoColor=white&labelColor=070b14" />
 </a>
 &nbsp;
 <a href="mailto:faqihmuhamad553@gmail.com">
-  <img src="https://img.shields.io/badge/Gmail-faqihmuhamad553@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0d1117" />
+  <img src="https://img.shields.io/badge/Gmail-faqihmuhamad553%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=070b14" />
 </a>
 
 <br/><br/>
 
-![Profile Views](https://komarev.com/ghpvc/?username=faqih55&color=00d4ff&style=for-the-badge&label=PROFILE+VIEWS)
+![Profile Views](https://komarev.com/ghpvc/?username=faqih55&color=00ffff&style=for-the-badge&label=PROFILE+VIEWS)
 
 <br/>
 
@@ -168,13 +168,12 @@
 
 ---
 
-<!-- Footer -->
 <div align="center">
 
 <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark&quote=iOS%2C%20Frontend%2C%20Backend%20%E2%80%94%20one%20humble%20developer%2C%20infinite%20possibilities.&author=faqih55" />
 
 <br/>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:7c3aed,50:00d4ff,100:0d1117&height=120&section=footer&animation=fadeIn" />
+[![footer](https://capsule-render.vercel.app/api?type=venom&color=0:070b14,30:b700ff,60:00ffff,100:070b14&height=120&section=footer&animation=fadeIn)](https://github.com/faqih55)
 
 </div>
