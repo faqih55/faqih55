@@ -76,12 +76,17 @@
 
 <br/>
 
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=faqih55&show_icons=true&theme=transparent&title_color=00ffff&text_color=e2e8f0&icon_color=b700ff&border_color=1e2d4a&bg_color=070b14&hide_border=false&rank_icon=github&include_all_commits=true&count_private=true" />
-<img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=faqih55&theme=transparent&background=070b14&border=1e2d4a&ring=00ffff&fire=b700ff&currStreakLabel=00ffff&sideLabels=e2e8f0&sideNums=e2e8f0&currStreakNum=ffffff&dates=4a5568" />
+<img width="49%" src="https://github-readme-stats.vercel.app/api?username=faqih55&show_icons=true&theme=tokyonight&title_color=00ffff&text_color=e2e8f0&icon_color=b700ff&border_color=00ffff&bg_color=0d1117&hide_border=false&rank_icon=percentile&include_all_commits=true&count_private=true&card_width=450" />
+<img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=faqih55&theme=tokyonight&background=0d1117&border=00ffff&ring=00ffff&fire=ff0080&currStreakLabel=00ffff&sideLabels=e2e8f0&sideNums=ffffff&currStreakNum=00ffff&dates=4a5568" />
 
 <br/>
 
-<img width="40%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=faqih55&layout=compact&theme=transparent&title_color=00ffff&text_color=e2e8f0&border_color=1e2d4a&bg_color=070b14&langs_count=6&hide_border=false" />
+<img width="38%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=faqih55&layout=donut&theme=tokyonight&title_color=00ffff&text_color=e2e8f0&border_color=00ffff&bg_color=0d1117&langs_count=8&hide_border=false" />
+<img width="59%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=faqih55&theme=tokyonight" />
+
+<br/>
+
+![trophy](https://github-profile-trophy.vercel.app/?username=faqih55&theme=tokyonight&no-frame=false&no-bg=false&margin-w=6&column=6&rank=SECRET,SSS,SS,S,AAA,AA,A,B)
 
 </div>
 
@@ -93,12 +98,35 @@
 
 <br/>
 
+> *"Every line of code is a brushstroke on a digital canvas."* — faqih55
+
+<br/>
+
+<!-- XDREW -->
 <a href="https://github.com/faqih55/XDREW">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=faqih55&repo=XDREW&theme=transparent&title_color=00ffff&text_color=e2e8f0&icon_color=b700ff&border_color=1e2d4a&bg_color=070b14" />
+  <img align="left" width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=faqih55&repo=XDREW&theme=tokyonight&title_color=00ffff&text_color=e2e8f0&icon_color=ff0080&border_color=00ffff&bg_color=0d1117&description_lines_count=3" />
 </a>
+
+<!-- Drew-Music -->
 <a href="https://github.com/faqih55/Drew-Music">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=faqih55&repo=Drew-Music&theme=transparent&title_color=00ffff&text_color=e2e8f0&icon_color=b700ff&border_color=1e2d4a&bg_color=070b14" />
+  <img align="right" width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=faqih55&repo=Drew-Music&theme=tokyonight&title_color=00ffff&text_color=e2e8f0&icon_color=ff0080&border_color=00ffff&bg_color=0d1117&description_lines_count=3" />
 </a>
+
+<br clear="both"/><br/>
+
+| 🚀 Project | 🛠 Stack | 💡 Soul |
+|:----------:|:--------:|:-------:|
+| **[XDREW](https://github.com/faqih55/XDREW)** | `Laravel` `PHP` `Blade` `MySQL` | Full-stack CMS — where backend craft meets frontend art |
+| **[Drew-Music](https://github.com/faqih55/Drew-Music)** | `Swift` `SwiftUI` `Xcode` | iOS music player — native, fluid, unapologetically Apple |
+| **Portfolio** | `HTML` `CSS` `JS` | The digital soul — clean code, bold design |
+| **Mobile Apps** | `Flutter` `Dart` | Cross-platform dreams, native performance |
+
+<br/>
+
+![iOS](https://img.shields.io/badge/Speciality-iOS%20Development-FA7343?style=flat-square&logo=apple&logoColor=white&labelColor=0d1117)
+![Laravel](https://img.shields.io/badge/Backend-Laravel%20%2B%20PHP-FF2D20?style=flat-square&logo=laravel&logoColor=white&labelColor=0d1117)
+![Flutter](https://img.shields.io/badge/Cross--Platform-Flutter%20%2B%20Dart-54C5F8?style=flat-square&logo=flutter&logoColor=white&labelColor=0d1117)
+![Open](https://img.shields.io/badge/Status-Open%20to%20Collaborate-00ffff?style=flat-square&labelColor=0d1117)
 
 </div>
 
