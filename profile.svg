@@ -1,33 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480">
   <defs>
-    <!-- NO @import — system fonts only, safe for GitHub Camo -->
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%"   stop-color="#070b14"/>
-      <stop offset="50%"  stop-color="#0a0e1a"/>
-      <stop offset="100%" stop-color="#080c18"/>
+      <stop offset="0%"   stop-color="#050810"/>
+      <stop offset="50%"  stop-color="#080c18"/>
+      <stop offset="100%" stop-color="#060a14"/>
     </linearGradient>
     <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#00ffff" stop-opacity=".15"/>
-      <stop offset="50%"  stop-color="#b700ff" stop-opacity=".10"/>
-      <stop offset="100%" stop-color="#ff0080" stop-opacity=".15"/>
+      <stop offset="0%"   stop-color="#00ffff" stop-opacity=".2"/>
+      <stop offset="50%"  stop-color="#b700ff" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="#ff0080" stop-opacity=".2"/>
     </linearGradient>
     <linearGradient id="gSwift"   x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#fa7343"/>
-      <stop offset="100%" stop-color="#ff0080"/>
+      <stop offset="0%" stop-color="#fa7343"/><stop offset="100%" stop-color="#ff0080"/>
     </linearGradient>
-    <linearGradient id="gPHP"     x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#777bb4"/>
-      <stop offset="100%" stop-color="#b700ff"/>
+    <linearGradient id="gPHP"   x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#777bb4"/><stop offset="100%" stop-color="#b700ff"/>
     </linearGradient>
     <linearGradient id="gFlutter" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#027dfd"/>
-      <stop offset="100%" stop-color="#00ffff"/>
+      <stop offset="0%" stop-color="#027dfd"/><stop offset="100%" stop-color="#00ffff"/>
     </linearGradient>
-    <linearGradient id="gJS"      x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#f7df1e"/>
-      <stop offset="100%" stop-color="#ffd700"/>
+    <linearGradient id="gJS" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f7df1e"/><stop offset="100%" stop-color="#ffd700"/>
     </linearGradient>
-
     <filter id="glow">
       <feGaussianBlur stdDeviation="2.5" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
@@ -36,83 +30,293 @@
       <feGaussianBlur stdDeviation="1.5" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-
+    <filter id="icon-glow">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
     <clipPath id="c1"><rect x="673" y="222" width="202" height="10" rx="5"/></clipPath>
     <clipPath id="c2"><rect x="673" y="260" width="202" height="10" rx="5"/></clipPath>
     <clipPath id="c3"><rect x="673" y="298" width="202" height="10" rx="5"/></clipPath>
     <clipPath id="c4"><rect x="673" y="336" width="202" height="10" rx="5"/></clipPath>
-
     <style><![CDATA[
       text { font-family: 'Courier New', Consolas, 'Lucida Console', monospace; }
 
-      /* ── Border glow cycle ── */
       @keyframes borderCycle {
-        0%,100% { stroke:#00ffff; }
-        50%      { stroke:#b700ff; }
+        0%,100% { stroke:#00ffff; filter:drop-shadow(0 0 4px #00ffff); }
+        50%      { stroke:#b700ff; filter:drop-shadow(0 0 4px #b700ff); }
       }
       .border-outer { animation: borderCycle 4s ease-in-out infinite; }
 
-      /* ── Corner blink ── */
-      @keyframes cornerBlink {
-        0%,100% { opacity:1; }
-        50%      { opacity:.3; }
-      }
+      @keyframes cornerBlink { 0%,100%{opacity:1;} 50%{opacity:.3;} }
       .corner { animation: cornerBlink 3s ease-in-out infinite; }
 
-      /* ── Status pulse ── */
-      @keyframes pulse {
-        0%,100% { opacity:1; }
-        50%      { opacity:.4; }
-      }
+      @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:.3;} }
       .pulse { animation: pulse 2s ease-in-out infinite; }
 
-      /* ── Cursor blink ── */
-      @keyframes blink {
-        0%,49% { opacity:1; }
-        50%,100%{ opacity:0; }
-      }
+      @keyframes blink { 0%,49%{opacity:1;} 50%,100%{opacity:0;} }
       .cursor { animation: blink 1s step-end infinite; }
 
-      /* ── Scanline sweep ── */
       @keyframes scan {
-        0%   { transform: translateY(0px);   opacity:.06; }
-        100% { transform: translateY(420px); opacity:0;   }
+        0%   { transform:translateY(0);   opacity:.07; }
+        100% { transform:translateY(420px); opacity:0; }
       }
       .scan { animation: scan 5s linear infinite; }
 
-      /* ── Terminal lines appear ── */
-      @keyframes show { to { opacity:1; } }
-      .l0 { opacity:0; animation: show .01s  0.5s forwards; }
-      .l1 { opacity:0; animation: show .01s  1.3s forwards; }
-      .l2 { opacity:0; animation: show .01s  2.1s forwards; }
-      .l3 { opacity:0; animation: show .01s  2.9s forwards; }
-      .l4 { opacity:0; animation: show .01s  3.7s forwards; }
-      .l5 { opacity:0; animation: show .01s  4.5s forwards; }
-      .l6 { opacity:0; animation: show .01s  5.3s forwards; }
-      .l7 { opacity:0; animation: show .01s  6.1s forwards; }
-      .l8 { opacity:0; animation: show .01s  6.9s forwards; }
+      /* Tech icon float animations */
+      @keyframes floatA { 0%,100%{transform:translateY(0) rotate(0deg);opacity:.13;} 50%{transform:translateY(-8px) rotate(3deg);opacity:.22;} }
+      @keyframes floatB { 0%,100%{transform:translateY(0) rotate(0deg);opacity:.10;} 50%{transform:translateY(-6px) rotate(-3deg);opacity:.18;} }
+      @keyframes floatC { 0%,100%{transform:translateY(0) rotate(0deg);opacity:.15;} 50%{transform:translateY(-10px) rotate(5deg);opacity:.25;} }
+      @keyframes floatD { 0%,100%{transform:translateY(0) rotate(0deg);opacity:.08;} 50%{transform:translateY(-5px) rotate(-2deg);opacity:.16;} }
+      @keyframes floatE { 0%,100%{transform:translateY(0) rotate(0deg);opacity:.12;} 50%{transform:translateY(-7px) rotate(4deg);opacity:.20;} }
+      .fa { animation: floatA 6s ease-in-out infinite; }
+      .fb { animation: floatB 7s ease-in-out infinite 1s; }
+      .fc { animation: floatC 5s ease-in-out infinite 0.5s; }
+      .fd { animation: floatD 8s ease-in-out infinite 1.5s; }
+      .fe { animation: floatE 6.5s ease-in-out infinite 2s; }
 
-      /* ── Skill bars fill ── */
+      /* Terminal lines */
+      @keyframes show { to { opacity:1; } }
+      .l0{opacity:0;animation:show .01s  0.5s forwards;}
+      .l1{opacity:0;animation:show .01s  1.3s forwards;}
+      .l2{opacity:0;animation:show .01s  2.1s forwards;}
+      .l3{opacity:0;animation:show .01s  2.9s forwards;}
+      .l4{opacity:0;animation:show .01s  3.7s forwards;}
+      .l5{opacity:0;animation:show .01s  4.5s forwards;}
+      .l6{opacity:0;animation:show .01s  5.3s forwards;}
+      .l7{opacity:0;animation:show .01s  6.1s forwards;}
+      .l8{opacity:0;animation:show .01s  6.9s forwards;}
+
+      /* Skill bars */
       @keyframes fillBar { from { width:0; } }
       .b1 { animation: fillBar 1.8s 1.0s ease-out forwards; width:0; }
       .b2 { animation: fillBar 1.8s 1.4s ease-out forwards; width:0; }
       .b3 { animation: fillBar 1.8s 1.8s ease-out forwards; width:0; }
       .b4 { animation: fillBar 1.8s 2.2s ease-out forwards; width:0; }
 
-      /* ── Title flicker ── */
       @keyframes flicker {
-        0%,18%,20%,52%,54%,100% { opacity:1; }
-        19%,53%                  { opacity:.5; }
+        0%,18%,20%,52%,54%,100%{opacity:1;} 19%,53%{opacity:.5;}
       }
       .flicker { animation: flicker 6s infinite; }
     ]]></style>
   </defs>
 
-  <!-- ─── Background ─── -->
+  <!-- ═══ BACKGROUND ═══ -->
   <rect width="900" height="480" fill="url(#bg)"/>
 
-  <!-- Grid -->
-  <g opacity=".04" stroke="#00ffff" stroke-width=".5">
+  <!-- ══════════════════════════════════════════════
+       FLOATING TECH ICONS (BACKGROUND LAYER)
+       All icons are SVG-only, no external images
+  ══════════════════════════════════════════════ -->
+
+  <!-- === APPLE LOGO (top-left) === -->
+  <g class="fa" transform="translate(55,68)">
+    <!-- Apple body -->
+    <path d="M22,8 C18,4 12,4 10,8 C8,4 2,4 0,8 C-2,14 2,22 10,28 C10,28 11,29 12,29 C13,29 14,28 14,28 C22,22 26,14 24,8 Z"
+          fill="#e2e8f0" opacity=".9" transform="scale(1.4)"/>
+    <!-- Leaf -->
+    <path d="M12,0 C12,0 16,-4 20,-2" fill="none" stroke="#e2e8f0" stroke-width="2" stroke-linecap="round" transform="scale(1.4)"/>
+    <text x="18" y="58" fill="#e2e8f0" font-size="9" text-anchor="middle" letter-spacing="1">APPLE</text>
+  </g>
+
+  <!-- === SWIFT LOGO (top center-left) === -->
+  <g class="fb" transform="translate(160,58)">
+    <rect x="0" y="0" width="44" height="44" rx="10" fill="#FA7343" opacity=".85"/>
+    <!-- Swift bird path (simplified) -->
+    <path d="M8,32 C8,32 26,28 34,14 C34,14 36,22 30,28 C30,28 38,24 40,16 C40,16 42,32 28,38 C28,38 20,40 8,32 Z"
+          fill="white" opacity=".95"/>
+    <text x="22" y="56" fill="#FA7343" font-size="9" text-anchor="middle" letter-spacing="1">SWIFT</text>
+  </g>
+
+  <!-- === XCODE LOGO (top center) === -->
+  <g class="fc" transform="translate(780,62)">
+    <rect x="0" y="0" width="44" height="44" rx="10" fill="#147EFB" opacity=".8"/>
+    <!-- Hammer -->
+    <rect x="19" y="8" width="6" height="20" rx="3" fill="white" opacity=".95"/>
+    <rect x="10" y="8" width="24" height="8" rx="3" fill="white" opacity=".95"/>
+    <!-- Pencil -->
+    <rect x="28" y="24" width="6" height="14" rx="2" fill="#ffd700" opacity=".95"/>
+    <polygon points="28,38 34,38 31,44" fill="#ffd700" opacity=".95"/>
+    <text x="22" y="58" fill="#147EFB" font-size="9" text-anchor="middle" letter-spacing="1">XCODE</text>
+  </g>
+
+  <!-- === FLUTTER LOGO (right side, mid-top) === -->
+  <g class="fd" transform="translate(840,130)">
+    <!-- Sky blue top rhombus -->
+    <polygon points="20,0 40,20 28,32 8,12" fill="#54C5F8" opacity=".9"/>
+    <!-- Darker bottom rhombus -->
+    <polygon points="8,32 28,32 40,44 20,44" fill="#01579B" opacity=".9"/>
+    <!-- White highlight slash -->
+    <polygon points="28,32 40,32 40,44 36,48" fill="#29B6F6" opacity=".7"/>
+    <text x="24" y="60" fill="#54C5F8" font-size="9" text-anchor="middle" letter-spacing="1">FLUTTER</text>
+  </g>
+
+  <!-- === ANDROID LOGO (right, mid) === -->
+  <g class="fe" transform="translate(848,238)">
+    <!-- Body -->
+    <rect x="4" y="22" width="34" height="22" rx="4" fill="#3DDC84" opacity=".9"/>
+    <!-- Head dome -->
+    <path d="M4,24 C4,10 38,10 38,24 Z" fill="#3DDC84" opacity=".9"/>
+    <!-- Eyes -->
+    <circle cx="14" cy="18" r="3" fill="white"/>
+    <circle cx="28" cy="18" r="3" fill="white"/>
+    <!-- Antennas -->
+    <line x1="12" y1="10" x2="6" y2="2" stroke="#3DDC84" stroke-width="2.5" stroke-linecap="round" opacity=".9"/>
+    <line x1="30" y1="10" x2="36" y2="2" stroke="#3DDC84" stroke-width="2.5" stroke-linecap="round" opacity=".9"/>
+    <!-- Arms & Legs -->
+    <rect x="-2" y="24" width="6" height="16" rx="3" fill="#3DDC84" opacity=".9"/>
+    <rect x="38" y="24" width="6" height="16" rx="3" fill="#3DDC84" opacity=".9"/>
+    <rect x="10" y="44" width="6" height="12" rx="3" fill="#3DDC84" opacity=".9"/>
+    <rect x="26" y="44" width="6" height="12" rx="3" fill="#3DDC84" opacity=".9"/>
+    <text x="21" y="72" fill="#3DDC84" font-size="9" text-anchor="middle" letter-spacing="1">ANDROID</text>
+  </g>
+
+  <!-- === WINDOWS LOGO (bottom right) === -->
+  <g class="fa" transform="translate(838,390)">
+    <rect x="0"  y="0"  width="18" height="18" rx="2" fill="#F35325"/>
+    <rect x="21" y="0"  width="18" height="18" rx="2" fill="#81BC06"/>
+    <rect x="0"  y="21" width="18" height="18" rx="2" fill="#05A6F0"/>
+    <rect x="21" y="21" width="18" height="18" rx="2" fill="#FFBA08"/>
+    <text x="19" y="55" fill="#e2e8f0" font-size="9" text-anchor="middle" letter-spacing="1">WINDOWS</text>
+  </g>
+
+  <!-- === LINUX / TUX (bottom center-right) === -->
+  <g class="fc" transform="translate(730,380)">
+    <!-- Body -->
+    <ellipse cx="20" cy="42" rx="16" ry="20" fill="#F5C518" opacity=".85"/>
+    <!-- Belly -->
+    <ellipse cx="20" cy="44" rx="10" ry="14" fill="#f0e68c" opacity=".9"/>
+    <!-- Head -->
+    <ellipse cx="20" cy="18" rx="14" ry="14" fill="#F5C518" opacity=".85"/>
+    <!-- Eyes -->
+    <ellipse cx="14" cy="15" rx="4" ry="5" fill="#1a1a2e"/>
+    <ellipse cx="26" cy="15" rx="4" ry="5" fill="#1a1a2e"/>
+    <circle cx="14" cy="14" r="2" fill="white"/>
+    <circle cx="26" cy="14" r="2" fill="white"/>
+    <!-- Beak -->
+    <polygon points="20,22 15,26 25,26" fill="#ff8c00" opacity=".9"/>
+    <!-- Ears -->
+    <ellipse cx="8"  cy="8" rx="5" ry="7" fill="#F5C518" opacity=".85"/>
+    <ellipse cx="32" cy="8" rx="5" ry="7" fill="#F5C518" opacity=".85"/>
+    <!-- Feet -->
+    <path d="M10,58 L4,66 L10,64 L8,70" fill="#ff8c00" stroke="#ff8c00" stroke-width="1" opacity=".9"/>
+    <path d="M30,58 L36,66 L30,64 L32,70" fill="#ff8c00" stroke="#ff8c00" stroke-width="1" opacity=".9"/>
+    <text x="20" y="82" fill="#F5C518" font-size="9" text-anchor="middle" letter-spacing="1">LINUX</text>
+  </g>
+
+  <!-- === GIT LOGO (bottom left) === -->
+  <g class="fb" transform="translate(42,370)">
+    <!-- Git diamond -->
+    <rect x="0" y="0" width="42" height="42" rx="6" fill="#F05032" opacity=".85"/>
+    <!-- Branch icon white -->
+    <circle cx="14" cy="14" r="5" fill="none" stroke="white" stroke-width="2.5"/>
+    <circle cx="30" cy="30" r="5" fill="none" stroke="white" stroke-width="2.5"/>
+    <circle cx="30" cy="14" r="5" fill="none" stroke="white" stroke-width="2.5"/>
+    <line x1="14" y1="19" x2="14" y2="28" stroke="white" stroke-width="2.5"/>
+    <line x1="14" y1="14" x2="25" y2="14" stroke="white" stroke-width="2.5"/>
+    <path d="M19,20 Q30,20 30,25" fill="none" stroke="white" stroke-width="2.5"/>
+    <text x="21" y="56" fill="#F05032" font-size="9" text-anchor="middle" letter-spacing="1">GIT</text>
+  </g>
+
+  <!-- === GITHUB LOGO (left, mid) === -->
+  <g class="fd" transform="translate(22,240)">
+    <!-- Circle background -->
+    <circle cx="24" cy="24" r="24" fill="#1a1a2e" stroke="#e2e8f0" stroke-width="2" opacity=".9"/>
+    <!-- Octocat simplified -->
+    <!-- Head -->
+    <ellipse cx="24" cy="22" rx="12" ry="11" fill="#e2e8f0"/>
+    <!-- Ears -->
+    <path d="M14,16 C12,10 8,10 10,16 Z" fill="#e2e8f0"/>
+    <path d="M34,16 C36,10 40,10 38,16 Z" fill="#e2e8f0"/>
+    <!-- Eyes -->
+    <circle cx="19" cy="20" r="2.5" fill="#1a1a2e"/>
+    <circle cx="29" cy="20" r="2.5" fill="#1a1a2e"/>
+    <!-- Nose -->
+    <ellipse cx="24" cy="25" rx="3" ry="2" fill="#c0c0c0"/>
+    <!-- Body tentacles -->
+    <path d="M16,32 C12,36 10,44 14,46 C18,48 20,44 24,44 C28,44 30,48 34,46 C38,44 36,36 32,32 C32,32 28,34 24,34 C20,34 16,32 16,32 Z" fill="#e2e8f0"/>
+    <text x="24" y="62" fill="#e2e8f0" font-size="9" text-anchor="middle" letter-spacing="1">GITHUB</text>
+  </g>
+
+  <!-- === VS CODE LOGO (top right area) === -->
+  <g class="fe" transform="translate(838,58)">
+    <rect x="0" y="0" width="44" height="44" rx="8" fill="#007ACC" opacity=".85"/>
+    <!-- VS Code icon: two angular bracket shapes -->
+    <polyline points="28,10 16,22 28,34" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="32" y1="10" x2="32" y2="34" stroke="white" stroke-width="4" stroke-linecap="round" opacity=".7"/>
+    <text x="22" y="58" fill="#007ACC" font-size="9" text-anchor="middle" letter-spacing="1">VS CODE</text>
+  </g>
+
+  <!-- === PHP LOGO (top-right background) === -->
+  <g class="fa" transform="translate(650,56)">
+    <ellipse cx="44" cy="20" rx="44" ry="20" fill="#777BB4" opacity=".8"/>
+    <text x="44" y="25" fill="white" font-size="16" font-weight="bold" text-anchor="middle" letter-spacing="2">php</text>
+    <text x="44" y="50" fill="#777BB4" font-size="9" text-anchor="middle" letter-spacing="1">PHP</text>
+  </g>
+
+  <!-- === LARAVEL LOGO (bottom center) === -->
+  <g class="fc" transform="translate(440,388)">
+    <rect x="0" y="0" width="44" height="44" rx="8" fill="#FF2D20" opacity=".85"/>
+    <!-- L shape -->
+    <text x="22" y="35" fill="white" font-size="28" font-weight="bold" text-anchor="middle" font-style="italic">L</text>
+    <text x="22" y="58" fill="#FF2D20" font-size="9" text-anchor="middle" letter-spacing="1">LARAVEL</text>
+  </g>
+
+  <!-- === MYSQL LOGO (bottom-left area) === -->
+  <g class="fb" transform="translate(140,388)">
+    <!-- DB cylinders -->
+    <ellipse cx="22" cy="10" rx="20" ry="7" fill="#00618A" opacity=".85"/>
+    <rect x="2" y="10" width="40" height="16" fill="#00618A" opacity=".85"/>
+    <ellipse cx="22" cy="26" rx="20" ry="7" fill="#007cb5" opacity=".85"/>
+    <rect x="2" y="26" width="40" height="14" fill="#007cb5" opacity=".85"/>
+    <ellipse cx="22" cy="40" rx="20" ry="7" fill="#007cb5" opacity=".85"/>
+    <!-- Dolphin fin orange accent -->
+    <path d="M32,4 C36,-2 44,2 40,8" fill="none" stroke="#F29111" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+    <text x="22" y="60" fill="#00618A" font-size="9" text-anchor="middle" letter-spacing="1">MYSQL</text>
+  </g>
+
+  <!-- === JAVASCRIPT LOGO (top left area, far) === -->
+  <g class="fd" transform="translate(250,370)">
+    <rect x="0" y="0" width="44" height="44" rx="4" fill="#F7DF1E" opacity=".85"/>
+    <text x="22" y="32" fill="#1a1a2e" font-size="20" font-weight="bold" text-anchor="middle" letter-spacing="-1">JS</text>
+    <text x="22" y="58" fill="#F7DF1E" font-size="9" text-anchor="middle" letter-spacing="1">JAVASCRIPT</text>
+  </g>
+
+  <!-- === DART LOGO (mid-right area) === -->
+  <g class="fa" transform="translate(844,322)">
+    <rect x="0" y="0" width="44" height="44" rx="8" fill="#0175C2" opacity=".85"/>
+    <!-- Dart hexagon shape -->
+    <polygon points="22,4 40,14 40,34 22,44 4,34 4,14" fill="#27B9F7" opacity=".7"/>
+    <text x="22" y="30" fill="white" font-size="16" font-weight="bold" text-anchor="middle">D</text>
+    <text x="22" y="58" fill="#0175C2" font-size="9" text-anchor="middle" letter-spacing="1">DART</text>
+  </g>
+
+  <!-- === macOS LOGO (far top right) === -->
+  <g class="fe" transform="translate(554,56)">
+    <!-- macOS abstract colourful circle -->
+    <path d="M24,0 A24,24 0 0,1 48,24" fill="#34C759"/>
+    <path d="M48,24 A24,24 0 0,1 24,48" fill="#007AFF"/>
+    <path d="M24,48 A24,24 0 0,1 0,24" fill="#FF3B30"/>
+    <path d="M0,24 A24,24 0 0,1 24,0" fill="#FF9500"/>
+    <circle cx="24" cy="24" r="10" fill="#050810"/>
+    <text x="24" y="62" fill="#e2e8f0" font-size="9" text-anchor="middle" letter-spacing="1">MACOS</text>
+  </g>
+
+  <!-- === ANDROID STUDIO (left, lower) === -->
+  <g class="fb" transform="translate(28,330)">
+    <circle cx="22" cy="22" r="22" fill="#3DDC84" opacity=".8"/>
+    <!-- Inner ring -->
+    <circle cx="22" cy="22" r="13" fill="none" stroke="#1a1a2e" stroke-width="5"/>
+    <!-- Android head simplified white -->
+    <ellipse cx="22" cy="18" rx="10" ry="9" fill="white" opacity=".9"/>
+    <circle cx="17" cy="16" r="2" fill="#3DDC84"/>
+    <circle cx="27" cy="16" r="2" fill="#3DDC84"/>
+    <line x1="13" y1="10" x2="9"  y2="5" stroke="white" stroke-width="2" stroke-linecap="round" opacity=".9"/>
+    <line x1="31" y1="10" x2="35" y2="5" stroke="white" stroke-width="2" stroke-linecap="round" opacity=".9"/>
+    <text x="22" y="58" fill="#3DDC84" font-size="8" text-anchor="middle" letter-spacing="1">ANDROID STUDIO</text>
+  </g>
+
+  <!-- Subtle thin grid lines -->
+  <g opacity=".025" stroke="#00ffff" stroke-width=".5">
     <line x1="0" y1="60"  x2="900" y2="60"/>  <line x1="0" y1="120" x2="900" y2="120"/>
     <line x1="0" y1="180" x2="900" y2="180"/> <line x1="0" y1="240" x2="900" y2="240"/>
     <line x1="0" y1="300" x2="900" y2="300"/> <line x1="0" y1="360" x2="900" y2="360"/>
@@ -126,11 +330,11 @@
     <line x1="780" y1="0" x2="780" y2="480"/> <line x1="840" y1="0" x2="840" y2="480"/>
   </g>
 
-  <!-- Scanline -->
+  <!-- Scanline sweep -->
   <rect class="scan" x="0" y="60" width="900" height="2" fill="#00ffff"/>
 
-  <!-- ─── Outer border (animated) ─── -->
-  <rect class="border-outer" x="2" y="2" width="896" height="476" rx="12" fill="none" stroke="#00ffff" stroke-width="1.5" filter="url(#glow-soft)"/>
+  <!-- ════════════ OUTER BORDER ════════════ -->
+  <rect class="border-outer" x="2" y="2" width="896" height="476" rx="12" fill="none" stroke="#00ffff" stroke-width="1.5"/>
   <rect x="6" y="6" width="888" height="468" rx="10" fill="none" stroke="#b700ff" stroke-width=".5" opacity=".3"/>
 
   <!-- Corner brackets -->
@@ -141,29 +345,23 @@
     <polyline points="868,478 898,478 898,448"/>
   </g>
 
-  <!-- ─── Header bar ─── -->
+  <!-- ════════════ HEADER BAR ════════════ -->
   <rect x="2" y="2" width="896" height="52" rx="12" fill="url(#hdr)"/>
-  <rect x="2" y="40" width="896" height="14" fill="#070b14" opacity=".9"/>
-
+  <rect x="2" y="40" width="896" height="14" fill="#050810" opacity=".95"/>
   <!-- Traffic lights -->
   <circle cx="30" cy="27" r="7" fill="#ff5f56"/>
   <circle cx="52" cy="27" r="7" fill="#ffbd2e"/>
   <circle cx="74" cy="27" r="7" fill="#27c93f"/>
-
   <!-- Title -->
-  <text x="450" y="33" fill="#00ffff" font-size="14" font-weight="bold" text-anchor="middle"
-        letter-spacing="5" filter="url(#glow)" class="flicker">◈  FAQIH55  ::  NEURAL INTERFACE  v2.0  ◈</text>
-
-  <!-- Online status -->
+  <text x="450" y="33" fill="#00ffff" font-size="14" font-weight="bold" text-anchor="middle" letter-spacing="5" filter="url(#glow)" class="flicker">◈  FAQIH55  ::  NEURAL INTERFACE  v2.0  ◈</text>
+  <!-- Status -->
   <circle class="pulse" cx="858" cy="27" r="5" fill="#00ff88" filter="url(#glow-soft)"/>
   <text x="847" y="31" fill="#00ff88" font-size="11" text-anchor="end" letter-spacing="1">ONLINE</text>
 
-  <!-- ═══════════════ LEFT PANEL ═══════════════ -->
-  <!-- Identity -->
-  <rect x="20" y="66" width="310" height="170" rx="8" fill="#0d1424" stroke="#00ffff" stroke-width=".8"/>
+  <!-- ════════════ LEFT PANEL ════════════ -->
+  <rect x="20" y="66" width="310" height="170" rx="8" fill="#0d1424" stroke="#00ffff" stroke-width=".8" opacity=".95"/>
   <rect x="20" y="66" width="310" height="30"  rx="8" fill="#00ffff" opacity=".07"/>
   <text x="36" y="87" fill="#00ffff" font-size="11" letter-spacing="3" filter="url(#glow-soft)">&#9658; IDENTITY.SYS</text>
-
   <text x="36" y="122" fill="#ffffff" font-size="30" font-weight="bold" letter-spacing="2" filter="url(#glow-soft)">faqih55</text>
   <text x="36" y="145" fill="#b700ff" font-size="12" letter-spacing="1" filter="url(#glow-soft)">@lil.fqh  ·  Indonesia</text>
   <line x1="36" y1="155" x2="314" y2="155" stroke="#1e2d4a" stroke-width="1"/>
@@ -175,17 +373,15 @@
   <text x="106" y="214" fill="#00ff88" font-size="11">Building · Learning · Shipping</text>
 
   <!-- Specializations -->
-  <rect x="20" y="248" width="310" height="110" rx="8" fill="#0d1424" stroke="#b700ff" stroke-width=".8"/>
+  <rect x="20" y="248" width="310" height="110" rx="8" fill="#0d1424" stroke="#b700ff" stroke-width=".8" opacity=".95"/>
   <rect x="20" y="248" width="310" height="30"  rx="8" fill="#b700ff" opacity=".07"/>
   <text x="36" y="269" fill="#b700ff" font-size="11" letter-spacing="3" filter="url(#glow-soft)">&#9658; SPECIALIZATIONS</text>
-
   <rect x="36"  y="284" width="100" height="22" rx="11" fill="none" stroke="#00ffff" stroke-width="1"/>
   <text x="86"  y="299" fill="#00ffff" font-size="10" text-anchor="middle" letter-spacing="1">iOS / SwiftUI</text>
   <rect x="146" y="284" width="80"  height="22" rx="11" fill="none" stroke="#b700ff" stroke-width="1"/>
   <text x="186" y="299" fill="#b700ff" font-size="10" text-anchor="middle" letter-spacing="1">Laravel</text>
   <rect x="236" y="284" width="78"  height="22" rx="11" fill="none" stroke="#ff0080" stroke-width="1"/>
   <text x="275" y="299" fill="#ff0080" font-size="10" text-anchor="middle" letter-spacing="1">Flutter</text>
-
   <rect x="36"  y="316" width="80"  height="22" rx="11" fill="none" stroke="#ffd700" stroke-width="1"/>
   <text x="76"  y="331" fill="#ffd700" font-size="10" text-anchor="middle" letter-spacing="1">JavaScript</text>
   <rect x="126" y="316" width="58"  height="22" rx="11" fill="none" stroke="#00ff88" stroke-width="1"/>
@@ -194,7 +390,7 @@
   <text x="223" y="331" fill="#4a9eff" font-size="10" text-anchor="middle" letter-spacing="1">MySQL</text>
 
   <!-- Connect -->
-  <rect x="20" y="370" width="310" height="92" rx="8" fill="#0d1424" stroke="#ff0080" stroke-width=".8"/>
+  <rect x="20" y="370" width="310" height="92" rx="8" fill="#0d1424" stroke="#ff0080" stroke-width=".8" opacity=".95"/>
   <rect x="20" y="370" width="310" height="30" rx="8" fill="#ff0080" opacity=".07"/>
   <text x="36" y="391" fill="#ff0080" font-size="11" letter-spacing="3" filter="url(#glow-soft)">&#9658; CONNECT.IO</text>
   <text x="36" y="414" fill="#4a5568" font-size="11">GH</text>
@@ -207,113 +403,70 @@
   <text x="58" y="454" fill="#1e2d4a" font-size="11">&#8250;</text>
   <text x="72" y="454" fill="#e2e8f0" font-size="11">faqihmuhamad553@gmail.com</text>
 
-  <!-- Left / Center divider -->
+  <!-- Dividers -->
   <line x1="345" y1="66" x2="345" y2="474" stroke="#1e2d4a" stroke-width="1.5"/>
+  <line x1="648" y1="66" x2="648" y2="474" stroke="#1e2d4a" stroke-width="1.5"/>
 
-  <!-- ═══════════════ CENTER PANEL — TERMINAL ═══════════════ -->
-  <rect x="355" y="66" width="280" height="398" rx="8" fill="#0d1424" stroke="#00ffff" stroke-width=".8"/>
+  <!-- ════════════ CENTER PANEL — TERMINAL ════════════ -->
+  <rect x="355" y="66" width="280" height="398" rx="8" fill="#0d1424" stroke="#00ffff" stroke-width=".8" opacity=".95"/>
   <rect x="355" y="66" width="280" height="30"  rx="8" fill="#00ffff" opacity=".06"/>
   <text x="370" y="87" fill="#00ffff" font-size="11" letter-spacing="3" filter="url(#glow-soft)">&#9658; TERMINAL.SH</text>
-
-  <!-- Terminal content -->
   <g font-size="12">
-    <!-- whoami -->
-    <g class="l0">
-      <text x="370" y="120" fill="#b700ff">&#10095;</text>
-      <text x="384" y="120" fill="#e2e8f0">whoami</text>
-    </g>
-    <g class="l1">
-      <text x="382" y="138" fill="#00ff88">faqih55 — iOS &amp; Fullstack Dev</text>
-    </g>
-
-    <!-- about -->
-    <g class="l2">
-      <text x="370" y="162" fill="#b700ff">&#10095;</text>
-      <text x="384" y="162" fill="#e2e8f0">cat about.txt</text>
-    </g>
+    <g class="l0"><text x="370" y="120" fill="#b700ff">&#10095;</text><text x="384" y="120" fill="#e2e8f0">whoami</text></g>
+    <g class="l1"><text x="382" y="138" fill="#00ff88">faqih55 — iOS &amp; Fullstack Dev</text></g>
+    <g class="l2"><text x="370" y="162" fill="#b700ff">&#10095;</text><text x="384" y="162" fill="#e2e8f0">cat about.txt</text></g>
     <g class="l3">
       <text x="382" y="180" fill="#4a5568">————————————————</text>
       <text x="382" y="196" fill="#00ffff">Passionate dev crafting clean,</text>
       <text x="382" y="212" fill="#00ffff">scalable iOS &amp; web solutions.</text>
     </g>
-
-    <!-- projects -->
-    <g class="l4">
-      <text x="370" y="236" fill="#b700ff">&#10095;</text>
-      <text x="384" y="236" fill="#e2e8f0">ls projects/</text>
-    </g>
+    <g class="l4"><text x="370" y="236" fill="#b700ff">&#10095;</text><text x="384" y="236" fill="#e2e8f0">ls projects/</text></g>
     <g class="l5">
       <text x="382" y="254" fill="#ffd700">&#128193; XDREW/</text>
       <text x="382" y="270" fill="#ffd700">&#128193; Drew-Music/</text>
       <text x="382" y="286" fill="#4a5568">+ more in progress...</text>
     </g>
-
-    <!-- philosophy -->
-    <g class="l6">
-      <text x="370" y="310" fill="#b700ff">&#10095;</text>
-      <text x="384" y="310" fill="#e2e8f0">echo $PHILOSOPHY</text>
-    </g>
+    <g class="l6"><text x="370" y="310" fill="#b700ff">&#10095;</text><text x="384" y="310" fill="#e2e8f0">echo $PHILOSOPHY</text></g>
     <g class="l7">
       <text x="382" y="328" fill="#ff0080">"I don't just write code —</text>
       <text x="382" y="344" fill="#ff0080"> I build experiences."</text>
     </g>
-
-    <!-- final prompt -->
     <g class="l8">
       <text x="370" y="374" fill="#b700ff">&#10095;</text>
       <text x="384" y="374" fill="#4a5568">npm run dream</text>
       <rect class="cursor" x="384" y="382" width="9" height="14" fill="#00ffff"/>
     </g>
-
-    <!-- footer -->
     <line x1="370" y1="434" x2="618" y2="434" stroke="#1e2d4a" stroke-width=".5"/>
     <text x="494" y="450" fill="#1e2d4a" font-size="10" text-anchor="middle" letter-spacing="2">[ SYSTEM READY ]</text>
     <text x="370" y="462" fill="#1e2d4a" font-size="9">PID:2025  MEM:&#8734;  CPU:100% PASSION</text>
   </g>
 
-  <!-- Center / Right divider -->
-  <line x1="648" y1="66" x2="648" y2="474" stroke="#1e2d4a" stroke-width="1.5"/>
-
-  <!-- ═══════════════ RIGHT PANEL — SKILL MATRIX ═══════════════ -->
-  <rect x="658" y="66" width="224" height="398" rx="8" fill="#0d1424" stroke="#b700ff" stroke-width=".8"/>
+  <!-- ════════════ RIGHT PANEL — SKILL MATRIX ════════════ -->
+  <rect x="658" y="66" width="224" height="398" rx="8" fill="#0d1424" stroke="#b700ff" stroke-width=".8" opacity=".95"/>
   <rect x="658" y="66" width="224" height="30"  rx="8" fill="#b700ff" opacity=".06"/>
   <text x="673" y="87" fill="#b700ff" font-size="11" letter-spacing="3" filter="url(#glow-soft)">&#9658; SKILL.MATRIX</text>
 
-  <!-- Bar: Swift -->
   <text x="673" y="215" fill="#4a5568" font-size="10" letter-spacing="1">Swift / SwiftUI</text>
   <text x="868" y="215" fill="#ff0080" font-size="10" text-anchor="end">92%</text>
   <rect x="673" y="222" width="202" height="10" rx="5" fill="#1e2d4a"/>
-  <g clip-path="url(#c1)">
-    <rect class="b1" x="673" y="222" width="186" height="10" rx="5" fill="url(#gSwift)" filter="url(#glow-soft)"/>
-  </g>
+  <g clip-path="url(#c1)"><rect class="b1" x="673" y="222" width="186" height="10" rx="5" fill="url(#gSwift)" filter="url(#glow-soft)"/></g>
 
-  <!-- Bar: PHP -->
   <text x="673" y="252" fill="#4a5568" font-size="10" letter-spacing="1">PHP / Laravel</text>
   <text x="868" y="252" fill="#b700ff" font-size="10" text-anchor="end">88%</text>
   <rect x="673" y="260" width="202" height="10" rx="5" fill="#1e2d4a"/>
-  <g clip-path="url(#c2)">
-    <rect class="b2" x="673" y="260" width="178" height="10" rx="5" fill="url(#gPHP)" filter="url(#glow-soft)"/>
-  </g>
+  <g clip-path="url(#c2)"><rect class="b2" x="673" y="260" width="178" height="10" rx="5" fill="url(#gPHP)" filter="url(#glow-soft)"/></g>
 
-  <!-- Bar: Flutter -->
   <text x="673" y="290" fill="#4a5568" font-size="10" letter-spacing="1">Dart / Flutter</text>
   <text x="868" y="290" fill="#00ffff" font-size="10" text-anchor="end">82%</text>
   <rect x="673" y="298" width="202" height="10" rx="5" fill="#1e2d4a"/>
-  <g clip-path="url(#c3)">
-    <rect class="b3" x="673" y="298" width="166" height="10" rx="5" fill="url(#gFlutter)" filter="url(#glow-soft)"/>
-  </g>
+  <g clip-path="url(#c3)"><rect class="b3" x="673" y="298" width="166" height="10" rx="5" fill="url(#gFlutter)" filter="url(#glow-soft)"/></g>
 
-  <!-- Bar: JS -->
   <text x="673" y="328" fill="#4a5568" font-size="10" letter-spacing="1">JavaScript</text>
   <text x="868" y="328" fill="#ffd700" font-size="10" text-anchor="end">78%</text>
   <rect x="673" y="336" width="202" height="10" rx="5" fill="#1e2d4a"/>
-  <g clip-path="url(#c4)">
-    <rect class="b4" x="673" y="336" width="158" height="10" rx="5" fill="url(#gJS)" filter="url(#glow-soft)"/>
-  </g>
+  <g clip-path="url(#c4)"><rect class="b4" x="673" y="336" width="158" height="10" rx="5" fill="url(#gJS)" filter="url(#glow-soft)"/></g>
 
   <line x1="673" y1="362" x2="868" y2="362" stroke="#1e2d4a" stroke-width=".8"/>
-
-  <!-- Tools -->
   <text x="673" y="378" fill="#4a5568" font-size="10" letter-spacing="2">TOOLS &amp; PLATFORMS</text>
   <text x="673" y="398" fill="#00ffff" font-size="11">Xcode</text>
   <text x="726" y="398" fill="#1e2d4a" font-size="11">·</text>
@@ -323,10 +476,7 @@
   <text x="673" y="416" fill="#b700ff" font-size="11">Android Studio</text>
   <text x="788" y="416" fill="#1e2d4a" font-size="11">·</text>
   <text x="798" y="416" fill="#b700ff" font-size="11">MySQL</text>
-
   <line x1="673" y1="428" x2="868" y2="428" stroke="#1e2d4a" stroke-width=".8"/>
-
-  <!-- Metrics -->
   <text x="673" y="444" fill="#4a5568" font-size="10" letter-spacing="2">SYSTEM METRICS</text>
   <text x="673" y="462" fill="#4a5568" font-size="10">COMMITS  &#8250;</text>
   <text x="752" y="462" fill="#00ff88" font-size="10">&#8734; (active)</text>
