@@ -21,65 +21,140 @@
 
 ---
 
-<!-- About Section -->
-<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="850" viewBox="0 0 850 850">
+    <defs>
+        <style>
+            /* Font & Base Styles */
+            .text { font-family: 'Courier New', Consolas, monospace; }
+            .title { font-size: 14px; font-weight: bold; fill: #38bdf8; letter-spacing: 2px; }
+            .label { font-size: 13px; font-weight: bold; fill: #38bdf8; letter-spacing: 1px; }
+            .white { fill: #f8fafc; }
+            .purple { fill: #a855f7; }
+            .green { fill: #4ade80; }
+            .dim { fill: #64748b; }
+            
+            /* Animations */
+            @keyframes pulse {
+                0% { opacity: 0.7; filter: drop-shadow(0 0 2px #4ade80); }
+                100% { opacity: 1; filter: drop-shadow(0 0 8px #4ade80); }
+            }
+            .status-glow { animation: pulse 1.5s infinite alternate; }
+            
+            @keyframes blink {
+                0%, 100% { opacity: 1; }
+                50% { opacity: 0; }
+            }
+            .cursor { animation: blink 1s step-end infinite; fill: #e2e8f0; }
 
-## ◈ ABOUT ME
+            /* Terminal Typing Sequence */
+            .term-line { opacity: 0; animation: reveal 0.1s forwards; }
+            @keyframes reveal { to { opacity: 1; } }
+            
+            .l1 { animation-delay: 0.5s; }
+            .l2 { animation-delay: 1.5s; }
+            .l3 { animation-delay: 2.5s; }
+            .l4 { animation-delay: 3.5s; }
+            .l5 { animation-delay: 4.5s; }
+            .l6 { animation-delay: 5.5s; }
+            .cursor-typing { animation: moveCursor 6s forwards, blink 1s step-end infinite; opacity: 0; }
+            
+            /* Hover Effects for Tech Stack */
+            .tech-box { transition: all 0.3s ease; }
+            .tech-box:hover { transform: translateY(-2px); stroke: #38bdf8; stroke-width: 2; }
+        </style>
+        
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
 
-</div>
+    <rect width="850" height="850" rx="15" fill="#090f1a" stroke="#1e293b" stroke-width="2"/>
+    
+    <circle cx="30" cy="30" r="5" fill="#ef4444"/>
+    <circle cx="50" cy="30" r="5" fill="#eab308"/>
+    <circle cx="70" cy="30" r="5" fill="#22c55e"/>
+    <text x="425" y="35" class="text title" text-anchor="middle">DEV_PROFILE :: SYSTEM ONLINE</text>
+    <circle cx="760" cy="31" r="4" fill="#4ade80" class="status-glow"/>
+    <text x="775" y="35" class="text green" font-size="12" font-weight="bold">ACTIVE</text>
 
-```swift
-// faqih55 — Developer Profile
-struct Developer {
-    let name       = "faqih55"
-    let location   = "Indonesia 🇮🇩"
-    let roles: [String] = [
-        "iOS Developer",          // SwiftUI & Apple ecosystem
-        "Frontend Developer",     // Clean & responsive UI
-        "Backend Developer",      // Scalable server-side logic
-    ]
-    let philosophy = "Humble code, big impact."
-    let stack: [String: [String]] = [
-        "iOS"      : ["Swift", "SwiftUI", "Xcode"],
-        "mobile"   : ["Dart", "Flutter"],
-        "web"      : ["PHP", "Laravel", "Blade", "JavaScript"],
-        "tools"    : ["Git", "MySQL", "VS Code", "Android Studio"],
-    ]
-    let currentlyDoing = [
-        "🍎 Building iOS apps with SwiftUI",
-        "🌐 Crafting frontend & backend solutions",
-        "📚 Always learning, always improving",
-        "🎵 Jamming to Drew Music",
-    ]
-    var motto: String {
-        "Write code that speaks for itself."
-    }
-}
-```
+    <rect x="30" y="70" width="380" height="200" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+    <text x="50" y="100" class="text label">▶ IDENTITY</text>
+    <text x="50" y="140" class="text white" font-size="28" font-weight="bold">faqih55</text>
+    <text x="50" y="165" class="text purple" font-size="14">@lil.fqh</text>
+    <text x="50" y="195" class="text white" font-size="14">📍 Indonesia 🇮🇩</text>
+    <text x="50" y="225" class="text purple" font-size="12">UID: <tspan class="purple">183920241</tspan></text>
+    <text x="50" y="245" class="text dim" font-size="12">STATUS: <tspan class="green status-glow" font-weight="bold">ONLINE</tspan></text>
+    <text x="50" y="265" class="text dim" font-size="12">MOTTO: <tspan class="white">Humble code, big impact.</tspan></text>
 
----
+    <rect x="430" y="70" width="390" height="200" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+    <text x="450" y="100" class="text label">▶ ROLES</text>
+    <rect x="30" y="290" width="790" height="190" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+    <text x="50" y="320" class="text label">▶ TECH STACK</text>
+    
+    <g class="tech-box">
+        <rect x="50" y="340" width="170" height="55" rx="6" fill="#141f36" stroke="#1e293b"/>
+        <text x="135" y="362" font-size="20" text-anchor="middle">🍎</text>
+        <text x="135" y="382" class="text white" font-size="12" text-anchor="middle">Swift</text>
+    </g>
+    <g class="tech-box">
+        <rect x="240" y="340" width="170" height="55" rx="6" fill="#141f36" stroke="#1e293b"/>
+        <text x="325" y="362" font-size="20" text-anchor="middle">📱</text>
+        <text x="325" y="382" class="text white" font-size="12" text-anchor="middle">SwiftUI</text>
+    </g>
+    <g class="tech-box">
+        <rect x="430" y="340" width="170" height="55" rx="6" fill="#141f36" stroke="#1e293b"/>
+        <text x="515" y="362" font-size="20" text-anchor="middle">🎯</text>
+        <text x="515" y="382" class="text dim" font-size="12" text-anchor="middle">Dart</text>
+    </g>
+    <g class="tech-box">
+        <rect x="620" y="340" width="170" height="55" rx="6" fill="#141f36" stroke="#1e293b"/>
+        <text x="705" y="362" font-size="20" text-anchor="middle">💙</text>
+        <text x="705" y="382" class="text dim" font-size="12" text-anchor="middle">Flutter</text>
+    </g>
+    
+    <g class="tech-box">
+        <rect x="50" y="405" width="170" height="55" rx="6" fill="#141f36" stroke="#1e293b"/>
+        <text x="135" y="427" font-size="20" text-anchor="middle">🐘</text>
+        <text x="135" y="447" class="text dim" font-size="12" text-anchor="middle">PHP</text>
+    </g>
+    <g class="tech-box">
+        <rect x="240" y="405" width="170" height="55" rx="6" fill="#141f36" stroke="#1e293b"/>
+        <text x="325" y="427" font-size="20" text-anchor="middle">🔴</text>
+        <text x="325" y="447" class="text dim" font-size="12" text-anchor="middle">Laravel</text>
+    </g>
+    <g class="tech-box">
+        <rect x="430" y="405" width="170" height="55" rx="6" fill="#141f36" stroke="#1e293b"/>
+        <text x="515" y="427" font-size="20" text-anchor="middle">🟨</text>
+        <text x="515" y="447" class="text dim" font-size="12" text-anchor="middle">JavaScript</text>
+    </g>
+    <g class="tech-box">
+        <rect x="620" y="405" width="170" height="55" rx="6" fill="#141f36" stroke="#1e293b"/>
+        <text x="705" y="427" font-size="20" text-anchor="middle">🗄️</text>
+        <text x="705" y="447" class="text dim" font-size="12" text-anchor="middle">MySQL</text>
+    </g>
 
-<!-- What I Do -->
-<div align="center">
+    <rect x="30" y="500" width="790" height="320" rx="10" fill="#090f1a" stroke="#1e293b" stroke-width="1.5"/>
+    <text x="50" y="530" class="text label">▶ TERMINAL</text>
+    
+    <g class="text" font-size="14">
+        <text x="50" y="570" class="term-line l1"><tspan class="label">▶</tspan> <tspan class="white">whoami</tspan></text>
+        <text x="65" y="595" class="term-line l2 dim">faqih55 — iOS &amp; Fullstack Developer</text>
+        
+        <text x="50" y="635" class="term-line l3"><tspan class="label">▶</tspan> <tspan class="white">cat philosophy.txt</tspan></text>
+        <text x="65" y="660" class="term-line l4 green">"I don't just write code — I build experiences."</text>
+        
+        <text x="50" y="700" class="term-line l5"><tspan class="label">▶</tspan> <tspan class="white">echo $CURRENTLY_BUILDING</tspan></text>
+        <text x="65" y="725" class="term-line l6 dim">iOS apps with SwiftUI + fullstack web solutions</text>
+        
+        <text x="50" y="765" class="term-line l6 label">▶</text>
+        <rect x="65" y="753" width="8" height="15" class="term-line l6 cursor"/>
+    </g>
+</svg>
 
-## ◈ WHAT I DO
-
-<br/>
-
-| 🍎 iOS Development | 🌐 Frontend | ⚙️ Backend |
-|:---:|:---:|:---:|
-| Building native iOS apps with **Swift & SwiftUI** | Crafting clean, responsive **web interfaces** | Building robust **server-side** solutions |
-| Focused on Apple ecosystem & smooth UX | HTML · CSS · JavaScript · Blade | PHP · Laravel · MySQL |
-| Xcode · SwiftUI declarative UI patterns | Pixel-perfect & user-friendly designs | RESTful APIs & database architecture |
-
-<br/>
-
-> *"I don't just write code — I build experiences. Whether it's a native iOS app or a full web platform, I approach every project with humility and a hunger to grow."*
-> — **faqih55**
-
-</div>
-
----
 
 <!-- Tech Stack -->
 <div align="center">
