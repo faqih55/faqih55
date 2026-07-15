@@ -31,7 +31,7 @@
 ```swift
 // faqih55 — Developer Profile
 struct Developer {
-    let name       = "Muhamad Fakih"
+    let name       = "faqih55"
     let location   = "Indonesia 🇮🇩"
     let roles: [String] = [
         "iOS Developer",          // SwiftUI & Apple ecosystem
