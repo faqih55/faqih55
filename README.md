@@ -23,9 +23,9 @@
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./profile.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./profile.svg">
-    <img alt="Faqih Terminal Profile" src="./profile.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/faqih55/faqih55/main/profile.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/faqih55/faqih55/main/profile.svg">
+    <img alt="Faqih Terminal Profile" src="https://raw.githubusercontent.com/faqih55/faqih55/main/profile.svg">
   </picture>
 </div>
 
